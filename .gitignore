@@ -1,0 +1,4 @@
+tools/hyperframes/
+animations/**/node_modules/
+animations/**/renders/
+node_modules/
