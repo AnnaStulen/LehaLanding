@@ -22,6 +22,14 @@ Main mood:
 - no random colorful crypto gradients;
 - no soft beige, no purple-dominant palette, no rounded card UI.
 
+## Inspiration Folder Rule
+
+The `вдохновение` folder is a reference folder, not a required asset folder:
+- images from `вдохновение` do not have to be inserted into the landing;
+- use them primarily as examples of mood, glow, depth, side-node patterns, 3D/5D feeling, and interactive background behavior;
+- insert a `вдохновение` image into the landing only if we deliberately decide it works for a specific block;
+- final visuals may be newly generated, redrawn, coded, or animated from actual course screenshots instead.
+
 ## Color System
 
 Primary background:
@@ -101,6 +109,7 @@ Treatment for inspiration images:
 - use as background layers, transitional atmospheres, or animation references;
 - remove visible generation/watermark marks before production use;
 - never mix them as unrelated decorative pictures.
+- remember: they are optional references, not mandatory landing content.
 
 ## Pricing Direction
 

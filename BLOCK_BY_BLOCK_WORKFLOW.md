@@ -61,11 +61,14 @@ Content goal:
 [Explain what this block must communicate.]
 
 Visual style:
-Black premium fintech/trading environment. Deep dark-blue neon glow inspired by the blue light inside the cube reference. The cube itself must not be used or animated. Square geometry. No rounded cards. CTA/button shapes are not needed inside the video unless requested. The visual must feel embedded into the black background, not pasted on top.
+Black premium fintech/trading environment. Deep dark-blue neon glow inspired by the blue light inside the cube reference. The cube itself must not be used or animated. Square geometry. No rounded cards. CTA/button shapes are not needed inside the video unless requested. The visual must feel embedded into the black background, not pasted on top. Images from `C:\ЛехаЛендинг\вдохновение` are references for mood/interactivity only; do not insert them into the final animation unless explicitly needed for this block.
 
 Source assets:
 - [absolute path to image 1]
 - [absolute path to image 2]
+
+Reference-only assets:
+- [absolute path to inspiration reference, if any]
 
 Motion:
 [Describe movement: glow pulse, side nodes, chart reveal, terminal zoom, etc.]
@@ -95,6 +98,7 @@ For each landing block, use this order:
    - redrawn chart;
    - embedded background visual;
    - Hyperframes video.
+   - inspiration reference only.
 
 3. Create or request animation
    - only if motion adds meaning.
