@@ -94,14 +94,90 @@
         </div>
       </section>
 
-      <section class="section-preview" id="program" aria-labelledby="program-title">
-        <p class="eyebrow">Блок 2</p>
-        <h2 id="program-title">Что именно будем делать на курсе</h2>
-        <p>
-          Следующим блоком раскрываем практическую механику: post-pump режимы,
-          управление инвентарем, архитектуру пассивной ликвидности и
-          controlled risk degradation.
-        </p>
+      <section class="course-actions" id="program" aria-labelledby="course-actions-title">
+        <div class="course-actions-grid" aria-hidden="true"></div>
+        <div class="course-actions-node" aria-hidden="true"></div>
+
+        <div class="course-actions-copy">
+          <p class="eyebrow">Block 02 / Market regime logic</p>
+          <h2 id="course-actions-title">Что именно будем делать на курсе</h2>
+          <p class="section-thesis">
+            Работать не с прогнозом, а с режимом
+          </p>
+          <p class="section-lead">
+            Мы разбираем post-pump рынок как рабочую среду: где импульс уже
+            изменил ликвидность, где появляется execution zone и как из этого
+            собрать микроструктурное преимущество.
+          </p>
+
+          <div class="regime-route" aria-label="Маршрут работы на курсе">
+            <span>режим</span>
+            <span>ликвидность</span>
+            <span>execution</span>
+            <span>inventory</span>
+            <span>risk review</span>
+          </div>
+
+          <div class="course-actions-list" aria-label="Что учимся делать">
+            <div>
+              <span>01</span>
+              <p>Отличать pump, transition и post-pump состояние рынка.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <p>Находить execution zone и строить пассивную ликвидность.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <p>Комбинировать агрессивное и пассивное исполнение.</p>
+            </div>
+            <div>
+              <span>04</span>
+              <p>Управлять инвентарем и заранее видеть деградацию риска.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="regime-visual" aria-label="Схема рыночного режима">
+          <div class="regime-terminal-bar">
+            <span>live chart fragment</span>
+            <span>post-pump execution map</span>
+          </div>
+          <div class="regime-chart-frame">
+            <img
+              src="./assets/block-02-regime-zoom.jpg"
+              alt="Фрагмент графика с импульсом, переходной зоной, post-pump участком и точками исполнения"
+              width="1280"
+              height="754"
+              loading="lazy"
+            />
+            <span class="zone-line zone-line-pump" aria-hidden="true"></span>
+            <span class="zone-line zone-line-transition" aria-hidden="true"></span>
+            <span class="zone-line zone-line-post" aria-hidden="true"></span>
+            <span class="zone-label zone-label-pump">pump</span>
+            <span class="zone-label zone-label-transition">transition</span>
+            <span class="zone-label zone-label-post">post-pump</span>
+            <span class="execution-zone">execution zone</span>
+          </div>
+          <div class="zone-legend" aria-label="Зоны на графике">
+            <span>pump</span>
+            <span>transition</span>
+            <span>post-pump</span>
+            <span>execution zone</span>
+          </div>
+          <div class="regime-context-strip">
+            <img
+              src="./assets/block-02-regime-wide.png"
+              alt="Широкий контекст торгового экрана с журналом сделок и графиком"
+              width="1449"
+              height="860"
+              loading="lazy"
+            />
+            <p>
+              Сначала читаем состояние рынка, затем выбираем логику исполнения.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section class="section-preview" id="pricing" aria-labelledby="pricing-title">
