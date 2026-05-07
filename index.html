@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Late Market Making</title>
+    <meta
+      name="description"
+      content="Практическая программа по адаптивному HFT market-making на post-pump рынках."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Главная навигация">
+      <a class="brand" href="#top" aria-label="Late Market Making">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Late Market Making</span>
+      </a>
+      <nav class="top-nav" aria-label="Разделы лендинга">
+        <a href="#program">Программа</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#contact">Telegram</a>
+      </nav>
+      <a class="nav-cta" href="#pricing">Записаться</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-node hero-node-left" aria-hidden="true"></div>
+        <div class="hero-node hero-node-right" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Post-pump market-making desk</p>
+          <h1 id="hero-title">Late Market Making</h1>
+          <p class="hero-subtitle">
+            Адаптивный HFT market-making для post-pump рынков: учимся строить
+            торговый деск, где execution, inventory, risk и research работают
+            как единая система.
+          </p>
+          <p class="hero-note">
+            Не курс про угадывание движения. Практика работы с
+            микроструктурой рынка, ликвидностью и контролем позиции в
+            live-среде.
+          </p>
+
+          <div class="hero-actions" aria-label="Действия">
+            <a class="button button-primary" href="#pricing">Записаться на курс</a>
+            <a class="button button-secondary" href="#program">Посмотреть программу</a>
+          </div>
+
+          <div class="system-path" aria-label="Маршрут системы">
+            <span>market regimes</span>
+            <span>quote logic</span>
+            <span>execution</span>
+            <span>inventory control</span>
+            <span>risk review</span>
+          </div>
+        </div>
+
+        <div class="hero-visual-wrap">
+          <button
+            class="hero-visual"
+            type="button"
+            aria-label="Открыть скрин торгового терминала"
+            data-open-lightbox
+          >
+            <span class="visual-label">software environment</span>
+            <span class="visual-scanline" aria-hidden="true"></span>
+            <img
+              src="./assets/program-screen-1.png"
+              alt="Скрин торгового терминала с графиком, стаканом, тепловыми зонами и панелями данных"
+              width="1917"
+              height="1002"
+            />
+          </button>
+        </div>
+
+        <div class="next-peek" aria-label="Следующий блок">
+          <span>Дальше</span>
+          <strong>Что именно будем делать на курсе</strong>
+        </div>
+      </section>
+
+      <section class="section-preview" id="program" aria-labelledby="program-title">
+        <p class="eyebrow">Блок 2</p>
+        <h2 id="program-title">Что именно будем делать на курсе</h2>
+        <p>
+          Следующим блоком раскрываем практическую механику: post-pump режимы,
+          управление инвентарем, архитектуру пассивной ликвидности и
+          controlled risk degradation.
+        </p>
+      </section>
+
+      <section class="section-preview" id="pricing" aria-labelledby="pricing-title">
+        <p class="eyebrow">Тарифы</p>
+        <h2 id="pricing-title">$1000 / $4700 / $10,000</h2>
+        <p>
+          Прайсинг будет собран отдельным блоком: Minimal, Main и VIP, с
+          выделением основного тарифа.
+        </p>
+      </section>
+    </main>
+
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Скрин торгового терминала" hidden>
+      <button class="lightbox-close" type="button" aria-label="Закрыть" data-close-lightbox>Закрыть</button>
+      <img
+        src="./assets/program-screen-1.png"
+        alt="Увеличенный скрин торгового терминала"
+        width="1917"
+        height="1002"
+      />
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -16,50 +16,19 @@ Skill used: `$ui-ux-pro-max`
 
 `Блок N готов. После блока N переходим в блок N+1: [название]`
 
-## Message Format Rule
-
-Всегда разделять сообщение на две части:
-
-1. Что конкретно дать в новый чат.
-2. Что это значит / что заложено / пояснение для Ани.
-
-Использовать разделительные линии:
-
-```text
-Начинаем блок N: [название]
-
-В новый чат давать:
-_______________
-
-[только файлы, документы, картинки, видео и сам промт]
-
-_______________
-
-Пояснение для тебя:
-_______________
-
-[что это значит, какие skills используются, что заложено, что не делать]
-
-_______________
-
-Блок N подготовлен. После блока N переходим в блок N+1: [название]
-```
-
-Важно:
-
-- В секции `В новый чат давать` писать только то, что Аня должна скопировать/прикрепить/указать в новом чате.
-- Skills писать внутри самого промта или в пояснении, но не смешивать со списком файлов.
-- Если пишем `hyperframes`, `hyperframes-cli`, `gsap`, обязательно объяснять простыми словами, зачем это нужно.
-
 ## Block 1
 
-Status: preparing prompt and structure.
+Status: prepared.
 
 Name: Hero / первый экран.
 
 Prompt file:
 
 `PROMPT_01_HERO.md`
+
+Solution file:
+
+`BLOCK_01_HERO_SOLUTION.md`
 
 What to give in a new chat:
 
@@ -89,7 +58,7 @@ What is planned:
 - rounded only CTA buttons;
 - `program screen 1.png` as main course/software visual;
 - possible click-to-zoom terminal screenshot;
-- decide if hero animation is needed after static structure.
+- no separate animation for now; start with static embedded visual and decide on motion after structure approval.
 
 ## Block 2
 
@@ -100,3 +69,4 @@ Name: Что именно будем делать на курсе.
 Purpose:
 
 Explain the concrete course activity: extracting market edge at the microstructure level in post-pump market states.
+
