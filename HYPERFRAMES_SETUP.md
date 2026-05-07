@@ -135,10 +135,11 @@ The source of truth is HTML:
 Use the landing design direction:
 
 - black canvas;
-- deep dark-blue neon glow;
+- deep dark-blue neon glow inspired by the cube reference color only;
 - square technical geometry;
 - no rounded cards;
 - no generic colorful crypto visuals;
+- never use or animate the cube image itself;
 - every image must receive motion/depth treatment;
 - visuals should feel embedded into the background.
 

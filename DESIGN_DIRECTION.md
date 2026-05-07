@@ -8,9 +8,15 @@ This document is the visual source of truth for the landing page. Use it in ever
 
 The landing should feel like a black premium trading/research system, not a generic crypto course page.
 
+Important brand-reference rule:
+- the black cube logo/reference image is used only as a color and light reference for the deep inner blue glow;
+- do not place the cube logo on the landing;
+- do not animate the cube;
+- do not use the cube as a hero object, section object, icon, background, or video asset.
+
 Main mood:
 - black background;
-- deep neon dark-blue glow from the cube logo;
+- deep neon dark-blue glow inspired by the blue light inside the cube reference;
 - embedded 3D/5D visuals that feel fused with the background;
 - analytical, cinematic, expensive, technical;
 - no random colorful crypto gradients;
@@ -25,7 +31,7 @@ Primary background:
 
 Main accent:
 - deep electric blue: `#005DFF`;
-- inner cube blue: `#0077FF`;
+- inner-reference blue: `#0077FF`;
 - neon cyan edge: `#00B7FF`;
 - soft blue glow: `rgba(0, 93, 255, 0.35)`.
 
@@ -158,4 +164,3 @@ For videos and animation:
 - motion library: `gsap`;
 - for 3D pieces: `three`;
 - for website-to-video workflows: `website-to-hyperframes`.
-
