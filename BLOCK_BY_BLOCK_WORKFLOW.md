@@ -118,6 +118,34 @@ For each landing block, use this order:
 
 ## Current Planned Blocks
 
+## Global Interaction And Spacing Checks
+
+Before any block is considered finished, verify these global rules:
+
+- the block is not static: screenshots, frames, cards, process rows, callouts, or CTA elements must have meaningful hover/focus states;
+- hover states use premium motion: subtle zoom, glow, border-light, parallax, callout highlight, or line movement;
+- motion uses transform/opacity/filter/SVG stroke animation rather than layout-shifting properties;
+- `prefers-reduced-motion` is respected;
+- backgrounds may have coded motion in empty areas, but it must not block CTA clicks or reduce text readability;
+- section spacing is not accidentally huge;
+- top padding is reduced when the next block should feel connected to the previous one;
+- large empty vertical pauses are used only when deliberately requested.
+
+If a block feels like a static screenshot pasted onto black, it is not finished.
+
+## Screenshot Brightness QA
+
+For any block using a real screenshot from the project folder:
+
+- keep the screenshot close to the original brightness;
+- do not solve visual integration by darkening the whole screenshot;
+- use frame, edge glow, callouts, local label backgrounds, hover, and lightbox instead;
+- check computed style on the image: `filter: none` and `opacity: 1`;
+- check the image container: no full-cover dark `::before` / `::after`;
+- if CSS was changed, hard refresh/cache-bust before judging the result.
+
+If a screenshot becomes unreadable or much darker than the original, the block is not finished.
+
 1. Hero: Late Market Making
 2. What we do on the course
 3. Program software complex

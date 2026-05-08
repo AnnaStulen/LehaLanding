@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260508-block-04-final-gaps" />
   </head>
   <body>
     <header class="site-header" aria-label="Главная навигация">
@@ -33,8 +33,434 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-grid" aria-hidden="true"></div>
-        <div class="hero-node hero-node-left" aria-hidden="true"></div>
-        <div class="hero-node hero-node-right" aria-hidden="true"></div>
+        <div class="hero-network" aria-hidden="true">
+          <svg class="activation-field" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="activation-cyan" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#f7fdff" />
+                <stop offset="18%" stop-color="#00e7ff" />
+                <stop offset="58%" stop-color="#00ffc8" />
+                <stop offset="100%" stop-color="#006cff" />
+              </linearGradient>
+              <linearGradient id="activation-hot" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" />
+                <stop offset="24%" stop-color="#ffb35c" />
+                <stop offset="68%" stop-color="#00e7ff" />
+                <stop offset="100%" stop-color="#a900ff" />
+              </linearGradient>
+              <linearGradient id="activation-violet" x1="100%" y1="20%" x2="10%" y2="100%">
+                <stop offset="0%" stop-color="#ff33ff" />
+                <stop offset="42%" stop-color="#00d9ff" />
+                <stop offset="100%" stop-color="#00ffa8" />
+              </linearGradient>
+              <filter id="activation-bloom" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2.8" result="blur" />
+                <feColorMatrix in="blur" type="matrix" values="1.8 0 0 0 0 0 1.8 0 0 0 0 0 2.1 0 0 0 0 0 1 0" result="bloom" />
+                <feMerge>
+                  <feMergeNode in="bloom" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+              <filter id="activation-soft-bloom" x="-35%" y="-35%" width="170%" height="170%" color-interpolation-filters="sRGB">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+                <feColorMatrix in="blur" type="matrix" values="1.5 0 0 0 0 0 1.7 0 0 0 0 0 2.2 0 0 0 0 0 .72 0" />
+              </filter>
+              <filter id="activation-spark-bloom" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="4.2" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <g class="activation-aura">
+              <path d="M1138 94 C1038 28 942 50 888 124 C830 204 730 154 652 224 C594 276 520 324 438 324 C330 324 268 384 150 486" />
+              <path d="M1110 216 C1014 266 936 270 846 342 C760 410 690 478 564 496 C426 516 366 568 214 612" />
+            </g>
+
+            <g class="activation-layer activation-core">
+              <path class="circuit-base" d="M1188 78 C1118 50 1048 50 1000 86 C952 122 932 174 866 166 C814 160 792 118 736 130 C688 140 664 184 618 202" />
+              <path class="circuit-energy energy-hot" pathLength="1" style="--delay: -0.15s" d="M1188 78 C1118 50 1048 50 1000 86 C952 122 932 174 866 166 C814 160 792 118 736 130 C688 140 664 184 618 202" />
+
+              <path class="circuit-base" d="M1168 168 H1096 C1050 168 1040 114 994 124 C946 134 954 204 904 214 C842 226 812 174 758 198 C716 216 700 254 648 268" />
+              <path class="circuit-energy energy-cyan" pathLength="1" style="--delay: -1.05s" d="M1168 168 H1096 C1050 168 1040 114 994 124 C946 134 954 204 904 214 C842 226 812 174 758 198 C716 216 700 254 648 268" />
+
+              <path class="circuit-base circuit-loop" d="M1054 86 C1128 110 1146 198 1084 244 C1024 288 918 258 906 190 C896 132 974 68 1054 86 Z" />
+              <path class="circuit-energy energy-violet circuit-loop" pathLength="1" style="--delay: -2.2s" d="M1054 86 C1128 110 1146 198 1084 244 C1024 288 918 258 906 190 C896 132 974 68 1054 86 Z" />
+
+              <path class="circuit-base" d="M1136 258 C1068 274 1042 328 976 332 C914 336 886 294 832 314 C786 330 770 384 704 390" />
+              <path class="circuit-energy energy-hot" pathLength="1" style="--delay: -3.15s" d="M1136 258 C1068 274 1042 328 976 332 C914 336 886 294 832 314 C786 330 770 384 704 390" />
+            </g>
+
+            <g class="activation-layer activation-spread">
+              <path class="circuit-base" d="M816 252 C760 292 712 318 632 306 C558 296 528 356 456 360 H364 C312 360 286 394 236 404 H112" />
+              <path class="circuit-energy energy-cyan" pathLength="1" style="--delay: -2.6s" d="M816 252 C760 292 712 318 632 306 C558 296 528 356 456 360 H364 C312 360 286 394 236 404 H112" />
+
+              <path class="circuit-base" d="M860 344 C792 386 726 430 626 426 C538 422 504 470 422 470 H320 C258 470 224 512 158 522 H34" />
+              <path class="circuit-energy energy-violet" pathLength="1" style="--delay: -4.05s" d="M860 344 C792 386 726 430 626 426 C538 422 504 470 422 470 H320 C258 470 224 512 158 522 H34" />
+
+              <path class="circuit-base" d="M730 458 C662 486 626 538 544 548 H452 C394 548 360 596 294 606 H158" />
+              <path class="circuit-energy energy-cyan" pathLength="1" style="--delay: -5.55s" d="M730 458 C662 486 626 538 544 548 H452 C394 548 360 596 294 606 H158" />
+            </g>
+
+            <g class="activation-layer activation-cta">
+              <path class="circuit-base" d="M462 404 C398 420 376 442 322 444 H238 C190 444 166 470 112 476 H0" />
+              <path class="circuit-energy energy-cyan" pathLength="1" style="--delay: -3.7s" d="M462 404 C398 420 376 442 322 444 H238 C190 444 166 470 112 476 H0" />
+
+              <path class="circuit-base" d="M532 512 C464 524 438 558 372 562 H278 C220 562 192 592 130 596 H16" />
+              <path class="circuit-energy energy-hot" pathLength="1" style="--delay: -5.1s" d="M532 512 C464 524 438 558 372 562 H278 C220 562 192 592 130 596 H16" />
+            </g>
+
+            <g class="activation-nodes">
+              <circle class="activation-node node-hot" style="--delay: -0.4s" cx="1138" cy="78" r="4.2" />
+              <circle class="activation-node node-hot" style="--delay: -1.2s" cx="1000" cy="86" r="3.4" />
+              <circle class="activation-node" style="--delay: -2.1s" cx="906" cy="190" r="3.2" />
+              <circle class="activation-node" style="--delay: -3.6s" cx="758" cy="198" r="2.8" />
+              <circle class="activation-node node-violet" style="--delay: -4.2s" cx="626" cy="426" r="2.6" />
+              <circle class="activation-node" style="--delay: -5s" cx="422" cy="470" r="2.3" />
+              <circle class="activation-node node-hot" style="--delay: -5.8s" cx="322" cy="444" r="2.2" />
+              <circle class="activation-node" style="--delay: -6.3s" cx="158" cy="522" r="2" />
+            </g>
+
+            <g class="activation-sparks">
+              <circle class="activation-spark spark-hot" style="--delay: -0.1s" cx="1104" cy="152" r="2.7" />
+              <circle class="activation-spark" style="--delay: -1.7s" cx="1018" cy="244" r="2.2" />
+              <circle class="activation-spark spark-violet" style="--delay: -2.8s" cx="868" cy="332" r="2.4" />
+              <circle class="activation-spark" style="--delay: -4.1s" cx="652" cy="268" r="2" />
+              <circle class="activation-spark spark-hot" style="--delay: -5.25s" cx="372" cy="562" r="1.9" />
+              <circle class="activation-spark" style="--delay: -6.35s" cx="112" cy="476" r="1.8" />
+            </g>
+          </svg>
+          <svg viewBox="0 0 860 600" preserveAspectRatio="xMidYMid meet">
+            <g class="network-board">
+              <g class="network-trace trace-cyan" style="--delay: -0.2s">
+                <path class="trace-base" d="M828 44 H746 V56 H716 V74 H640 V86 H620 V96 H552" />
+                <path class="trace-flow" pathLength="1" d="M828 44 H746 V56 H716 V74 H640 V86 H620 V96 H552" />
+                <circle class="trace-node" cx="828" cy="44" r="1.9" />
+                <circle class="trace-node" cx="552" cy="96" r="1.9" />
+              </g>
+              <g class="network-trace trace-cyan" style="--delay: -1.1s">
+                <path class="trace-base" d="M806 64 H754 V76 H724 V94 H648 V104 H628 V116 H568" />
+                <path class="trace-flow" pathLength="1" d="M806 64 H754 V76 H724 V94 H648 V104 H628 V116 H568" />
+                <circle class="trace-node" cx="806" cy="64" r="1.7" />
+                <circle class="trace-node" cx="568" cy="116" r="1.7" />
+              </g>
+              <g class="network-trace trace-blue" style="--delay: -2s">
+                <path class="trace-base" d="M846 92 H780 V106 H746 V126 H664 V136 H642 V148 H590" />
+                <path class="trace-flow" pathLength="1" d="M846 92 H780 V106 H746 V126 H664 V136 H642 V148 H590" />
+                <circle class="trace-node" cx="846" cy="92" r="1.8" />
+                <circle class="trace-node" cx="590" cy="148" r="1.8" />
+              </g>
+              <g class="network-trace trace-teal" style="--delay: -2.8s">
+                <path class="trace-base" d="M818 118 H770 V132 H738 V150 H668 V160 H646 V172 H586" />
+                <path class="trace-flow" pathLength="1" d="M818 118 H770 V132 H738 V150 H668 V160 H646 V172 H586" />
+                <circle class="trace-node" cx="818" cy="118" r="1.7" />
+                <circle class="trace-node" cx="586" cy="172" r="1.7" />
+              </g>
+              <g class="network-trace trace-cyan" style="--delay: -3.4s">
+                <path class="trace-base" d="M792 146 H726 V158 H696 V178 H626 V190 H604 V202 H530" />
+                <path class="trace-flow" pathLength="1" d="M792 146 H726 V158 H696 V178 H626 V190 H604 V202 H530" />
+                <circle class="trace-node" cx="792" cy="146" r="1.8" />
+                <circle class="trace-node" cx="530" cy="202" r="1.8" />
+              </g>
+              <g class="network-trace trace-blue" style="--delay: -4.1s">
+                <path class="trace-base" d="M742 186 H692 V198 H662 V218 H596 V230 H574 V240 H520" />
+                <path class="trace-flow" pathLength="1" d="M742 186 H692 V198 H662 V218 H596 V230 H574 V240 H520" />
+                <circle class="trace-node" cx="742" cy="186" r="1.6" />
+                <circle class="trace-node" cx="520" cy="240" r="1.6" />
+              </g>
+              <g class="network-trace trace-teal" style="--delay: -4.8s">
+                <path class="trace-base" d="M846 218 H786 V230 H758 V248 H684 V258 H664 V270 H610" />
+                <path class="trace-flow" pathLength="1" d="M846 218 H786 V230 H758 V248 H684 V258 H664 V270 H610" />
+                <circle class="trace-node" cx="846" cy="218" r="1.9" />
+                <circle class="trace-node" cx="610" cy="270" r="1.9" />
+              </g>
+              <g class="network-trace trace-cyan" style="--delay: -5.5s">
+                <path class="trace-base" d="M808 242 H756 V254 H728 V272 H656 V282 H634 V294 H572" />
+                <path class="trace-flow" pathLength="1" d="M808 242 H756 V254 H728 V272 H656 V282 H634 V294 H572" />
+                <circle class="trace-node" cx="808" cy="242" r="1.7" />
+                <circle class="trace-node" cx="572" cy="294" r="1.7" />
+              </g>
+              <g class="network-trace trace-blue" style="--delay: -6.2s">
+                <path class="trace-base" d="M786 268 H724 V280 H696 V298 H628 V310 H604 V324 H538" />
+                <path class="trace-flow" pathLength="1" d="M786 268 H724 V280 H696 V298 H628 V310 H604 V324 H538" />
+                <circle class="trace-node" cx="786" cy="268" r="1.6" />
+                <circle class="trace-node" cx="538" cy="324" r="1.6" />
+              </g>
+              <g class="network-trace trace-teal" style="--delay: -6.9s">
+                <path class="trace-base" d="M728 304 H672 V316 H642 V336 H568 V346 H546 V358 H486" />
+                <path class="trace-flow" pathLength="1" d="M728 304 H672 V316 H642 V336 H568 V346 H546 V358 H486" />
+                <circle class="trace-node" cx="728" cy="304" r="1.8" />
+                <circle class="trace-node" cx="486" cy="358" r="1.8" />
+              </g>
+              <g class="network-trace trace-cyan" style="--delay: -7.6s">
+                <path class="trace-base" d="M690 344 H632 V356 H604 V374 H532 V386 H508 V400 H438" />
+                <path class="trace-flow" pathLength="1" d="M690 344 H632 V356 H604 V374 H532 V386 H508 V400 H438" />
+                <circle class="trace-node" cx="690" cy="344" r="1.8" />
+                <circle class="trace-node" cx="438" cy="400" r="1.8" />
+              </g>
+              <g class="network-trace trace-blue" style="--delay: -8.3s">
+                <path class="trace-base" d="M648 372 H596 V384 H568 V402 H496 V414 H472 V426 H412" />
+                <path class="trace-flow" pathLength="1" d="M648 372 H596 V384 H568 V402 H496 V414 H472 V426 H412" />
+                <circle class="trace-node" cx="648" cy="372" r="1.6" />
+                <circle class="trace-node" cx="412" cy="426" r="1.6" />
+              </g>
+              <g class="network-trace trace-teal" style="--delay: -9s">
+                <path class="trace-base" d="M596 410 H538 V422 H508 V440 H430 V452 H408 V464 H344" />
+                <path class="trace-flow" pathLength="1" d="M596 410 H538 V422 H508 V440 H430 V452 H408 V464 H344" />
+                <circle class="trace-node" cx="596" cy="410" r="1.7" />
+                <circle class="trace-node" cx="344" cy="464" r="1.7" />
+              </g>
+              <g class="network-trace trace-cyan" style="--delay: -9.7s">
+                <path class="trace-base" d="M546 438 H486 V450 H458 V468 H384 V480 H360 V492 H296" />
+                <path class="trace-flow" pathLength="1" d="M546 438 H486 V450 H458 V468 H384 V480 H360 V492 H296" />
+                <circle class="trace-node" cx="546" cy="438" r="1.8" />
+                <circle class="trace-node" cx="296" cy="492" r="1.8" />
+              </g>
+              <g class="network-trace trace-blue" style="--delay: -10.4s">
+                <path class="trace-base" d="M502 468 H444 V482 H414 V500 H338 V510 H318 V522 H254" />
+                <path class="trace-flow" pathLength="1" d="M502 468 H444 V482 H414 V500 H338 V510 H318 V522 H254" />
+                <circle class="trace-node" cx="502" cy="468" r="1.6" />
+                <circle class="trace-node" cx="254" cy="522" r="1.6" />
+              </g>
+              <g class="network-trace trace-teal" style="--delay: -11.1s">
+                <path class="trace-base" d="M456 498 H396 V510 H368 V528 H294 V540 H272 V552 H210" />
+                <path class="trace-flow" pathLength="1" d="M456 498 H396 V510 H368 V528 H294 V540 H272 V552 H210" />
+                <circle class="trace-node" cx="456" cy="498" r="1.7" />
+                <circle class="trace-node" cx="210" cy="552" r="1.7" />
+              </g>
+              <g class="network-trace trace-cyan" style="--delay: -11.8s">
+                <path class="trace-base" d="M402 526 H344 V540 H314 V558 H248 V568 H226 V580 H160" />
+                <path class="trace-flow" pathLength="1" d="M402 526 H344 V540 H314 V558 H248 V568 H226 V580 H160" />
+                <circle class="trace-node" cx="402" cy="526" r="1.8" />
+                <circle class="trace-node" cx="160" cy="580" r="1.8" />
+              </g>
+              <g class="network-trace trace-blue" style="--delay: -3.1s">
+                <path class="trace-base" d="M620 52 H582 V62 H560 V74 H520 V86 H496 V98 H448" />
+                <path class="trace-flow" pathLength="1" d="M620 52 H582 V62 H560 V74 H520 V86 H496 V98 H448" />
+                <circle class="trace-node" cx="620" cy="52" r="1.4" />
+                <circle class="trace-node" cx="448" cy="98" r="1.4" />
+              </g>
+              <g class="network-trace trace-teal" style="--delay: -6.6s">
+                <path class="trace-base" d="M512 152 H474 V162 H454 V174 H410 V186 H388 V196 H342" />
+                <path class="trace-flow" pathLength="1" d="M512 152 H474 V162 H454 V174 H410 V186 H388 V196 H342" />
+                <circle class="trace-node" cx="512" cy="152" r="1.4" />
+                <circle class="trace-node" cx="342" cy="196" r="1.4" />
+              </g>
+              <g class="network-trace trace-cyan" style="--delay: -8.8s">
+                <path class="trace-base" d="M426 252 H382 V262 H360 V274 H316 V286 H292 V298 H248" />
+                <path class="trace-flow" pathLength="1" d="M426 252 H382 V262 H360 V274 H316 V286 H292 V298 H248" />
+                <circle class="trace-node" cx="426" cy="252" r="1.4" />
+                <circle class="trace-node" cx="248" cy="298" r="1.4" />
+              </g>
+              <g class="network-trace trace-cyan trace-hairline" style="--delay: -0.6s">
+                <path class="trace-base" d="M842 78 H800 V88 H754 V100 H704 V112 H652" />
+                <path class="trace-flow" pathLength="1" d="M842 78 H800 V88 H754 V100 H704 V112 H652" />
+                <circle class="trace-node" cx="842" cy="78" r="1.25" />
+                <circle class="trace-node" cx="652" cy="112" r="1.25" />
+              </g>
+              <g class="network-trace trace-blue trace-hairline" style="--delay: -1.3s">
+                <path class="trace-base" d="M836 88 H796 V98 H748 V110 H702 V122 H656" />
+                <path class="trace-flow" pathLength="1" d="M836 88 H796 V98 H748 V110 H702 V122 H656" />
+                <circle class="trace-node" cx="836" cy="88" r="1.2" />
+                <circle class="trace-node" cx="656" cy="122" r="1.2" />
+              </g>
+              <g class="network-trace trace-teal trace-hairline" style="--delay: -2.1s">
+                <path class="trace-base" d="M824 100 H788 V110 H744 V122 H696 V136 H642" />
+                <path class="trace-flow" pathLength="1" d="M824 100 H788 V110 H744 V122 H696 V136 H642" />
+                <circle class="trace-node" cx="824" cy="100" r="1.2" />
+                <circle class="trace-node" cx="642" cy="136" r="1.2" />
+              </g>
+              <g class="network-trace trace-cyan trace-hairline" style="--delay: -2.7s">
+                <path class="trace-base" d="M774 132 H734 V144 H682 V158 H632 V170 H584" />
+                <path class="trace-flow" pathLength="1" d="M774 132 H734 V144 H682 V158 H632 V170 H584" />
+                <circle class="trace-node" cx="774" cy="132" r="1.2" />
+                <circle class="trace-node" cx="584" cy="170" r="1.2" />
+              </g>
+              <g class="network-trace trace-blue trace-hairline" style="--delay: -3.3s">
+                <path class="trace-base" d="M786 142 H742 V154 H694 V166 H646 V180 H594" />
+                <path class="trace-flow" pathLength="1" d="M786 142 H742 V154 H694 V166 H646 V180 H594" />
+                <circle class="trace-node" cx="786" cy="142" r="1.2" />
+                <circle class="trace-node" cx="594" cy="180" r="1.2" />
+              </g>
+              <g class="network-trace trace-teal trace-hairline" style="--delay: -4s">
+                <path class="trace-base" d="M798 154 H752 V166 H704 V178 H654 V192 H606" />
+                <path class="trace-flow" pathLength="1" d="M798 154 H752 V166 H704 V178 H654 V192 H606" />
+                <circle class="trace-node" cx="798" cy="154" r="1.2" />
+                <circle class="trace-node" cx="606" cy="192" r="1.2" />
+              </g>
+              <g class="network-trace trace-cyan trace-hairline" style="--delay: -4.7s">
+                <path class="trace-base" d="M850 198 H810 V210 H760 V222 H706 V236 H650" />
+                <path class="trace-flow" pathLength="1" d="M850 198 H810 V210 H760 V222 H706 V236 H650" />
+                <circle class="trace-node" cx="850" cy="198" r="1.25" />
+                <circle class="trace-node" cx="650" cy="236" r="1.25" />
+              </g>
+              <g class="network-trace trace-blue trace-hairline" style="--delay: -5.2s">
+                <path class="trace-base" d="M832 208 H798 V220 H748 V232 H698 V246 H646" />
+                <path class="trace-flow" pathLength="1" d="M832 208 H798 V220 H748 V232 H698 V246 H646" />
+                <circle class="trace-node" cx="832" cy="208" r="1.2" />
+                <circle class="trace-node" cx="646" cy="246" r="1.2" />
+              </g>
+              <g class="network-trace trace-teal trace-hairline" style="--delay: -5.8s">
+                <path class="trace-base" d="M814 220 H780 V232 H730 V244 H680 V258 H626" />
+                <path class="trace-flow" pathLength="1" d="M814 220 H780 V232 H730 V244 H680 V258 H626" />
+                <circle class="trace-node" cx="814" cy="220" r="1.2" />
+                <circle class="trace-node" cx="626" cy="258" r="1.2" />
+              </g>
+              <g class="network-trace trace-cyan trace-hairline" style="--delay: -6.4s">
+                <path class="trace-base" d="M770 286 H730 V298 H684 V310 H636 V324 H584" />
+                <path class="trace-flow" pathLength="1" d="M770 286 H730 V298 H684 V310 H636 V324 H584" />
+                <circle class="trace-node" cx="770" cy="286" r="1.2" />
+                <circle class="trace-node" cx="584" cy="324" r="1.2" />
+              </g>
+              <g class="network-trace trace-blue trace-hairline" style="--delay: -7s">
+                <path class="trace-base" d="M756 296 H716 V308 H670 V320 H620 V334 H570" />
+                <path class="trace-flow" pathLength="1" d="M756 296 H716 V308 H670 V320 H620 V334 H570" />
+                <circle class="trace-node" cx="756" cy="296" r="1.2" />
+                <circle class="trace-node" cx="570" cy="334" r="1.2" />
+              </g>
+              <g class="network-trace trace-teal trace-hairline" style="--delay: -7.7s">
+                <path class="trace-base" d="M742 308 H704 V320 H656 V332 H608 V346 H554" />
+                <path class="trace-flow" pathLength="1" d="M742 308 H704 V320 H656 V332 H608 V346 H554" />
+                <circle class="trace-node" cx="742" cy="308" r="1.2" />
+                <circle class="trace-node" cx="554" cy="346" r="1.2" />
+              </g>
+              <g class="network-trace trace-cyan trace-hairline" style="--delay: -8.2s">
+                <path class="trace-base" d="M668 326 H626 V338 H578 V350 H530 V364 H476" />
+                <path class="trace-flow" pathLength="1" d="M668 326 H626 V338 H578 V350 H530 V364 H476" />
+                <circle class="trace-node" cx="668" cy="326" r="1.2" />
+                <circle class="trace-node" cx="476" cy="364" r="1.2" />
+              </g>
+              <g class="network-trace trace-blue trace-hairline" style="--delay: -8.8s">
+                <path class="trace-base" d="M658 338 H614 V350 H566 V362 H518 V376 H462" />
+                <path class="trace-flow" pathLength="1" d="M658 338 H614 V350 H566 V362 H518 V376 H462" />
+                <circle class="trace-node" cx="658" cy="338" r="1.2" />
+                <circle class="trace-node" cx="462" cy="376" r="1.2" />
+              </g>
+              <g class="network-trace trace-teal trace-hairline" style="--delay: -9.4s">
+                <path class="trace-base" d="M648 350 H604 V362 H556 V374 H508 V388 H452" />
+                <path class="trace-flow" pathLength="1" d="M648 350 H604 V362 H556 V374 H508 V388 H452" />
+                <circle class="trace-node" cx="648" cy="350" r="1.2" />
+                <circle class="trace-node" cx="452" cy="388" r="1.2" />
+              </g>
+              <g class="network-trace trace-cyan trace-hairline" style="--delay: -10s">
+                <path class="trace-base" d="M604 392 H562 V404 H514 V416 H466 V430 H410" />
+                <path class="trace-flow" pathLength="1" d="M604 392 H562 V404 H514 V416 H466 V430 H410" />
+                <circle class="trace-node" cx="604" cy="392" r="1.25" />
+                <circle class="trace-node" cx="410" cy="430" r="1.25" />
+              </g>
+              <g class="network-trace trace-blue trace-hairline" style="--delay: -10.6s">
+                <path class="trace-base" d="M590 404 H548 V416 H500 V428 H452 V442 H394" />
+                <path class="trace-flow" pathLength="1" d="M590 404 H548 V416 H500 V428 H452 V442 H394" />
+                <circle class="trace-node" cx="590" cy="404" r="1.2" />
+                <circle class="trace-node" cx="394" cy="442" r="1.2" />
+              </g>
+              <g class="network-trace trace-teal trace-hairline" style="--delay: -11.2s">
+                <path class="trace-base" d="M578 416 H536 V428 H488 V440 H440 V454 H382" />
+                <path class="trace-flow" pathLength="1" d="M578 416 H536 V428 H488 V440 H440 V454 H382" />
+                <circle class="trace-node" cx="578" cy="416" r="1.2" />
+                <circle class="trace-node" cx="382" cy="454" r="1.2" />
+              </g>
+              <g class="network-trace trace-cyan trace-hairline" style="--delay: -11.8s">
+                <path class="trace-base" d="M536 456 H496 V468 H448 V480 H400 V494 H344" />
+                <path class="trace-flow" pathLength="1" d="M536 456 H496 V468 H448 V480 H400 V494 H344" />
+                <circle class="trace-node" cx="536" cy="456" r="1.2" />
+                <circle class="trace-node" cx="344" cy="494" r="1.2" />
+              </g>
+              <g class="network-trace trace-blue trace-hairline" style="--delay: -12.4s">
+                <path class="trace-base" d="M522 468 H482 V480 H434 V492 H386 V506 H330" />
+                <path class="trace-flow" pathLength="1" d="M522 468 H482 V480 H434 V492 H386 V506 H330" />
+                <circle class="trace-node" cx="522" cy="468" r="1.2" />
+                <circle class="trace-node" cx="330" cy="506" r="1.2" />
+              </g>
+              <g class="network-trace trace-teal trace-hairline" style="--delay: -13s">
+                <path class="trace-base" d="M508 480 H468 V492 H420 V504 H372 V518 H316" />
+                <path class="trace-flow" pathLength="1" d="M508 480 H468 V492 H420 V504 H372 V518 H316" />
+                <circle class="trace-node" cx="508" cy="480" r="1.2" />
+                <circle class="trace-node" cx="316" cy="518" r="1.2" />
+              </g>
+              <g class="network-trace trace-cyan trace-hairline" style="--delay: -13.6s">
+                <path class="trace-base" d="M470 514 H428 V526 H382 V538 H334 V552 H276" />
+                <path class="trace-flow" pathLength="1" d="M470 514 H428 V526 H382 V538 H334 V552 H276" />
+                <circle class="trace-node" cx="470" cy="514" r="1.2" />
+                <circle class="trace-node" cx="276" cy="552" r="1.2" />
+              </g>
+              <g class="network-trace trace-blue trace-hairline" style="--delay: -14.2s">
+                <path class="trace-base" d="M456 526 H414 V538 H368 V550 H320 V564 H262" />
+                <path class="trace-flow" pathLength="1" d="M456 526 H414 V538 H368 V550 H320 V564 H262" />
+                <circle class="trace-node" cx="456" cy="526" r="1.2" />
+                <circle class="trace-node" cx="262" cy="564" r="1.2" />
+              </g>
+              <g class="network-trace trace-teal trace-hairline" style="--delay: -14.8s">
+                <path class="trace-base" d="M442 538 H400 V550 H354 V562 H306 V576 H248" />
+                <path class="trace-flow" pathLength="1" d="M442 538 H400 V550 H354 V562 H306 V576 H248" />
+                <circle class="trace-node" cx="442" cy="538" r="1.2" />
+                <circle class="trace-node" cx="248" cy="576" r="1.2" />
+              </g>
+              <g class="network-trace trace-cyan trace-hairline" style="--delay: -15.4s">
+                <path class="trace-base" d="M820 176 H786 V184 H738 V194 H690 V206 H640" />
+                <path class="trace-flow" pathLength="1" d="M820 176 H786 V184 H738 V194 H690 V206 H640" />
+                <circle class="trace-node" cx="820" cy="176" r="1.16" />
+                <circle class="trace-node" cx="640" cy="206" r="1.16" />
+              </g>
+              <g class="network-trace trace-blue trace-hairline" style="--delay: -16s">
+                <path class="trace-base" d="M812 184 H780 V192 H732 V202 H684 V214 H632" />
+                <path class="trace-flow" pathLength="1" d="M812 184 H780 V192 H732 V202 H684 V214 H632" />
+                <circle class="trace-node" cx="812" cy="184" r="1.16" />
+                <circle class="trace-node" cx="632" cy="214" r="1.16" />
+              </g>
+              <g class="network-trace trace-teal trace-hairline" style="--delay: -16.6s">
+                <path class="trace-base" d="M804 192 H772 V200 H724 V210 H676 V222 H624" />
+                <path class="trace-flow" pathLength="1" d="M804 192 H772 V200 H724 V210 H676 V222 H624" />
+                <circle class="trace-node" cx="804" cy="192" r="1.16" />
+                <circle class="trace-node" cx="624" cy="222" r="1.16" />
+              </g>
+              <g class="network-trace trace-cyan trace-hairline" style="--delay: -17.2s">
+                <path class="trace-base" d="M706 366 H670 V374 H622 V386 H574 V398 H526" />
+                <path class="trace-flow" pathLength="1" d="M706 366 H670 V374 H622 V386 H574 V398 H526" />
+                <circle class="trace-node" cx="706" cy="366" r="1.16" />
+                <circle class="trace-node" cx="526" cy="398" r="1.16" />
+              </g>
+              <g class="network-trace trace-blue trace-hairline" style="--delay: -17.8s">
+                <path class="trace-base" d="M696 374 H660 V382 H612 V394 H564 V406 H516" />
+                <path class="trace-flow" pathLength="1" d="M696 374 H660 V382 H612 V394 H564 V406 H516" />
+                <circle class="trace-node" cx="696" cy="374" r="1.16" />
+                <circle class="trace-node" cx="516" cy="406" r="1.16" />
+              </g>
+              <g class="network-trace trace-teal trace-hairline" style="--delay: -18.4s">
+                <path class="trace-base" d="M686 382 H650 V390 H602 V402 H554 V414 H506" />
+                <path class="trace-flow" pathLength="1" d="M686 382 H650 V390 H602 V402 H554 V414 H506" />
+                <circle class="trace-node" cx="686" cy="382" r="1.16" />
+                <circle class="trace-node" cx="506" cy="414" r="1.16" />
+              </g>
+              <g class="network-trace trace-cyan trace-hairline trace-cta" style="--delay: -19s">
+                <path class="trace-base" d="M432 392 H384 V404 H324 V416 H252 V428 H154 V440 H54" />
+                <path class="trace-flow" pathLength="1" d="M432 392 H384 V404 H324 V416 H252 V428 H154 V440 H54" />
+                <circle class="trace-node" cx="432" cy="392" r="1.12" />
+                <circle class="trace-node" cx="54" cy="440" r="1.12" />
+              </g>
+              <g class="network-trace trace-blue trace-hairline trace-cta" style="--delay: -19.6s">
+                <path class="trace-base" d="M410 414 H366 V426 H304 V438 H232 V450 H132 V462 H34" />
+                <path class="trace-flow" pathLength="1" d="M410 414 H366 V426 H304 V438 H232 V450 H132 V462 H34" />
+                <circle class="trace-node" cx="410" cy="414" r="1.1" />
+                <circle class="trace-node" cx="34" cy="462" r="1.1" />
+              </g>
+              <g class="network-trace trace-teal trace-hairline trace-cta" style="--delay: -20.2s">
+                <path class="trace-base" d="M448 434 H396 V446 H338 V458 H270 V470 H178 V482 H72" />
+                <path class="trace-flow" pathLength="1" d="M448 434 H396 V446 H338 V458 H270 V470 H178 V482 H72" />
+                <circle class="trace-node" cx="448" cy="434" r="1.1" />
+                <circle class="trace-node" cx="72" cy="482" r="1.1" />
+              </g>
+              <g class="network-trace trace-cyan trace-hairline trace-cta" style="--delay: -20.8s">
+                <path class="trace-base" d="M372 452 H326 V464 H270 V476 H202 V488 H112 V500 H18" />
+                <path class="trace-flow" pathLength="1" d="M372 452 H326 V464 H270 V476 H202 V488 H112 V500 H18" />
+                <circle class="trace-node" cx="372" cy="452" r="1.08" />
+                <circle class="trace-node" cx="18" cy="500" r="1.08" />
+              </g>
+            </g>
+          </svg>
+        </div>
 
         <div class="hero-content">
           <p class="eyebrow">Post-pump market-making desk</p>
@@ -74,6 +500,8 @@
             type="button"
             aria-label="Открыть скрин торгового терминала"
             data-open-lightbox
+            data-lightbox-src="./assets/program-screen-1.png"
+            data-lightbox-alt="Увеличенный скрин торгового терминала"
           >
             <span class="visual-frame-top" aria-hidden="true">
               <span>software desk</span>
@@ -87,11 +515,6 @@
             />
           </button>
         </div>
-
-        <div class="next-peek" aria-label="Следующий блок">
-          <span>Дальше</span>
-          <strong>Что именно будем делать на курсе</strong>
-        </div>
       </section>
 
       <section class="course-actions" id="program" aria-labelledby="course-actions-title">
@@ -99,11 +522,8 @@
         <div class="course-actions-node" aria-hidden="true"></div>
 
         <div class="course-actions-copy">
-          <p class="eyebrow">Block 02 / Market regime logic</p>
-          <h2 id="course-actions-title">Что именно будем делать на курсе</h2>
-          <p class="section-thesis">
-            Работать не с прогнозом, а с режимом
-          </p>
+          <p class="eyebrow">Execution / Market regime logic</p>
+          <h2 id="course-actions-title">Мы работаем не с прогнозом движения, а с режимом рынка</h2>
           <p class="section-lead">
             Мы разбираем post-pump рынок как рабочую среду: где импульс уже
             изменил ликвидность, где появляется execution zone и как из этого
@@ -111,27 +531,27 @@
           </p>
 
           <div class="regime-route" aria-label="Маршрут работы на курсе">
-            <span>режим</span>
-            <span>ликвидность</span>
-            <span>execution</span>
-            <span>inventory</span>
-            <span>risk review</span>
+            <span style="--route-index: 0">режим</span>
+            <span style="--route-index: 1">ликвидность</span>
+            <span style="--route-index: 2">execution</span>
+            <span style="--route-index: 3">inventory</span>
+            <span style="--route-index: 4">risk review</span>
           </div>
 
           <div class="course-actions-list" aria-label="Что учимся делать">
-            <div>
+            <div style="--item-index: 0">
               <span>01</span>
               <p>Отличать pump, transition и post-pump состояние рынка.</p>
             </div>
-            <div>
+            <div style="--item-index: 1">
               <span>02</span>
               <p>Находить execution zone и строить пассивную ликвидность.</p>
             </div>
-            <div>
+            <div style="--item-index: 2">
               <span>03</span>
               <p>Комбинировать агрессивное и пассивное исполнение.</p>
             </div>
-            <div>
+            <div style="--item-index: 3">
               <span>04</span>
               <p>Управлять инвентарем и заранее видеть деградацию риска.</p>
             </div>
@@ -154,10 +574,14 @@
             <span class="zone-line zone-line-pump" aria-hidden="true"></span>
             <span class="zone-line zone-line-transition" aria-hidden="true"></span>
             <span class="zone-line zone-line-post" aria-hidden="true"></span>
-            <span class="zone-label zone-label-pump">pump</span>
-            <span class="zone-label zone-label-transition">transition</span>
-            <span class="zone-label zone-label-post">post-pump</span>
-            <span class="execution-zone">execution zone</span>
+            <span class="zone-focus zone-focus-pump" aria-hidden="true"></span>
+            <span class="zone-focus zone-focus-transition" aria-hidden="true"></span>
+            <span class="zone-focus zone-focus-post" aria-hidden="true"></span>
+            <span class="zone-focus zone-focus-execution" aria-hidden="true"></span>
+            <span class="zone-label zone-label-pump" data-zone="pump">pump</span>
+            <span class="zone-label zone-label-transition" data-zone="transition">transition</span>
+            <span class="zone-label zone-label-post" data-zone="post">post-pump</span>
+            <span class="execution-zone" data-zone="execution">execution zone</span>
           </div>
           <div class="zone-legend" aria-label="Зоны на графике">
             <span>pump</span>
@@ -180,6 +604,157 @@
         </div>
       </section>
 
+      <section class="software-complex" aria-labelledby="software-complex-title">
+        <div class="software-complex-grid" aria-hidden="true"></div>
+
+        <div class="software-kicker">
+          <p class="eyebrow">Software command surface</p>
+          <div class="software-kicker-line"></div>
+          <span>research / infrastructure</span>
+        </div>
+
+        <div class="software-visual-shell">
+          <button
+            class="software-visual"
+            type="button"
+            aria-label="Открыть скрин программного комплекса"
+            data-open-lightbox
+            data-lightbox-src="./assets/block-03-software-complex.png"
+            data-lightbox-alt="Увеличенный скрин программного комплекса с рабочим торговым деском"
+          >
+            <span class="software-terminal-bar" aria-hidden="true">
+              <span>live-market workflow</span>
+              <span>execution / risk / review</span>
+            </span>
+            <img
+              src="./assets/block-03-software-complex.png"
+              alt="Широкий скрин программного комплекса с графиками, стаканом, таблицами, идеями и рыночными панелями"
+              width="2048"
+              height="994"
+              loading="lazy"
+            />
+          </button>
+
+          <button class="software-callout callout-market" type="button" data-software-zone="market">
+            <span>Market data</span>
+            поток, стакан, volume
+          </button>
+          <button class="software-callout callout-risk" type="button" data-software-zone="risk">
+            <span>Risk layer</span>
+            позиция и деградация риска
+          </button>
+          <button class="software-callout callout-execution" type="button" data-software-zone="execution">
+            <span>Execution terminal</span>
+            работа не в теории, а в среде
+          </button>
+          <button class="software-callout callout-review" type="button" data-software-zone="review">
+            <span>Trade review</span>
+            разбор решений после рынка
+          </button>
+        </div>
+      </section>
+
+      <section class="research-edge" aria-labelledby="research-edge-title">
+        <div class="research-edge-grid" aria-hidden="true"></div>
+        <div class="research-edge-node" aria-hidden="true"></div>
+
+        <div class="research-media-stack">
+          <div class="research-video-shell tech-proof-frame">
+            <div class="research-frame-bar" aria-hidden="true">
+              <span>Research layer</span>
+              <span>model validation loop</span>
+            </div>
+            <video
+              class="research-video"
+              src="./animations/block-04-research-edge/block-04-research-edge.mp4"
+              muted
+              autoplay
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Research visualization with equity curve, PnL distribution, volatility regime and risk profile"
+            ></video>
+          </div>
+
+          <div class="research-console" aria-labelledby="research-edge-title">
+            <div class="research-console-head">
+              <p class="eyebrow">Strategy validation</p>
+              <span>Not signals. System validation.</span>
+            </div>
+            <h2 id="research-edge-title">Research и научное преимущество</h2>
+            <p class="research-thesis">
+              Мы проверяем стратегию как модель: через распределение результата, волатильность,
+              чувствительность к импульсам и профиль риска.
+            </p>
+            <div class="research-status-row" aria-label="Research status labels">
+              <span>equity curve</span>
+              <span>tail risk</span>
+              <span>stress zone</span>
+            </div>
+            <p class="research-formula">
+              Мы не верим стратегии — мы проверяем, где она работает, где ломается и какой риск несет.
+            </p>
+          </div>
+        </div>
+
+        <div class="research-proof-stack" aria-label="Research proof materials">
+          <figure class="research-proof-card tech-proof-frame">
+            <div class="research-frame-bar" aria-hidden="true">
+              <span>PnL distribution</span>
+              <span>equity / stability</span>
+            </div>
+            <img
+              src="./assets/block-04-research-01.jpg"
+              alt="Research chart with equity curve and PnL distribution"
+              width="1280"
+              height="720"
+              loading="lazy"
+            />
+            <figcaption>Equity curve показывает не только рост, но и качество траектории.</figcaption>
+          </figure>
+
+          <figure class="research-proof-card tech-proof-frame">
+            <div class="research-frame-bar" aria-hidden="true">
+              <span>Volatility regime</span>
+              <span>risk boundary</span>
+            </div>
+            <img
+              src="./assets/block-04-research-02.jpg"
+              alt="Research chart with volatility, gamma proxy and risk profile"
+              width="1280"
+              height="720"
+              loading="lazy"
+            />
+            <figcaption>Risk profile показывает границы, где модель зарабатывает, ломается или требует фильтра.</figcaption>
+          </figure>
+
+          <a class="research-telegram-cta" href="#contact" aria-label="Связаться в Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M21.7 4.2 18.5 19c-.2 1-.8 1.2-1.6.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 12.8 1.7 11.3c-1-.3-1-1 .2-1.5L20.3 2.7c.8-.3 1.6.2 1.4 1.5Z" />
+            </svg>
+            <span>Связаться в Telegram</span>
+          </a>
+        </div>
+
+        <div class="research-chip-console" aria-label="Research validation elements">
+          <span style="--chip-index: 0">Strategy validation</span>
+          <span style="--chip-index: 1">PnL distribution</span>
+          <span style="--chip-index: 2">Volatility regime</span>
+          <span style="--chip-index: 3">Gamma proxy</span>
+          <span style="--chip-index: 4">Risk boundary</span>
+          <span style="--chip-index: 5">Model stress zone</span>
+          <span style="--chip-index: 6">Research layer</span>
+          <span style="--chip-index: 7">Not signals. System validation.</span>
+        </div>
+
+        <div class="research-notes" aria-label="Что проверяем в research">
+          <p><span>01</span>PnL distribution помогает видеть хвосты, асимметрию и частоту убытков.</p>
+          <p><span>02</span>Rolling volatility показывает, когда стратегия становится нестабильной.</p>
+          <p><span>03</span>Gamma proxy подсвечивает чувствительность к резким изменениям структуры рынка.</p>
+          <p><span>04</span>Risk profile показывает зоны, где модель зарабатывает, ломается или требует фильтра.</p>
+        </div>
+      </section>
+
       <section class="section-preview" id="pricing" aria-labelledby="pricing-title">
         <p class="eyebrow">Тарифы</p>
         <h2 id="pricing-title">$1000 / $4700 / $10,000</h2>
@@ -197,6 +772,7 @@
         alt="Увеличенный скрин торгового терминала"
         width="1917"
         height="1002"
+        data-lightbox-image
       />
     </div>
 

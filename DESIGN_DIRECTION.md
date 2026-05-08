@@ -101,9 +101,40 @@ Treatment for chart/research images:
 
 Treatment for screenshots:
 - place inside square-corner technical frames;
-- add subtle black glass/dark overlay if the image is too colorful;
+- preserve the original screenshot readability and brightness; screenshots are proof, not background texture;
+- do not globally darken software screenshots or terminal screenshots;
+- use only local overlays/scrims behind text labels and callouts, not a full-image blackout;
+- if a screenshot is too colorful, correct it gently with contrast/saturation and a light blue/cyan framing layer, while keeping interface details readable;
 - use blue/cyan highlight lines and callouts;
 - allow click-to-zoom for dense terminal screenshots.
+
+Screenshot brightness rule:
+- default target is close to the original asset;
+- acceptable treatment: technical frame, edge glow, local label scrims, subtle scanline, hover zoom;
+- avoid: opacity below 0.75, heavy black overlays, `brightness()` filters below 0.9, or making the UI unreadable;
+- for `program screen 1.png` and `видсофта1.png`, keep the trading interface visibly close to the original image.
+
+## Critical Screenshot Rule: No Global Darkening
+
+This rule was added after a real implementation bug: screenshots were made too dark even when the original assets were correct.
+
+For every production screenshot, terminal screenshot, software screenshot, chart screenshot, or proof image:
+
+- default CSS must be `filter: none`;
+- do not use `brightness()`, `hue-rotate()`, global `saturate()`/`contrast()` filters, or `opacity` to force the screenshot into the palette;
+- do not place `::before` / `::after` full-image black overlays above the screenshot;
+- do not use full-image black gradients, full-image scrims, or dark blend layers over the screenshot;
+- do not put opacity on the screenshot parent if it visually darkens the image;
+- top bars, callouts, labels, and text chips may have local dark backgrounds, but those backgrounds must cover only the text area;
+- edge glow, square frame, thin lines, labels, hover zoom, and lightbox are the correct way to integrate screenshots;
+- if a screenshot still looks too bright, ask before changing global brightness.
+
+Verification required for screenshot blocks:
+
+- inspect computed styles for the image: `filter: none`, `opacity: 1`;
+- inspect pseudo-elements on the image container: no full-cover dark `::before` or `::after`;
+- compare visually against the original asset before delivery;
+- hard refresh or cache-bust CSS after removing image filters.
 
 Treatment for inspiration images:
 - use as background layers, transitional atmospheres, or animation references;
@@ -112,6 +143,43 @@ Treatment for inspiration images:
 - remember: they are optional references, not mandatory landing content.
 
 ## Pricing Direction
+
+## Global Interactivity And Motion Direction
+
+The landing must feel alive and premium, closer to a moving trading/research interface than to a static set of screenshots.
+
+This is a global rule for every block:
+- if a block has images, charts, screenshots, frames, cards, panels, pricing tiers, process rows, callouts, or navigation elements, it needs an intentional hover/focus/interaction state;
+- use subtle zoom-in, parallax, depth shift, glow increase, border-light movement, line tracing, node pulsing, scanlines, active callouts, and cursor-follow light only when they support the meaning of the block;
+- images and screenshots should react on hover with transform-based movement: slight scale, perspective, glow, or masked reveal;
+- callouts and labels should feel connected to the visual: hover on a label may highlight the related zone, line, point, or frame;
+- CTA buttons need a premium hover state: brighter blue/cyan edge, glow, and responsive press/focus feedback;
+- animated backgrounds are allowed in empty/depth areas: coded circuit lines, data streams, grid drift, node pulses, and diagonal light paths;
+- use `вдохновение/вдох5.webp` only as a reference for circuit/node movement and diagonal energy, not as a pasted decorative image unless a block explicitly asks for it.
+
+Motion quality:
+- expensive, calm, technical, cinematic;
+- no cheap blinking, bouncing, chaotic crypto motion, or rainbow effects;
+- animation should feel like a trading/research system waking up, not like a game UI;
+- prefer transform, opacity, filter, clip-path, SVG stroke-dashoffset, and CSS variables;
+- avoid animating layout properties such as width, height, top, left, padding, and margin;
+- every moving element must respect `prefers-reduced-motion`.
+
+The goal is not to animate everything equally. The goal is that every visible block has enough responsive life that the landing feels high-value and interactive.
+
+## Section Spacing And Rhythm
+
+Do not create huge empty gaps between blocks by default.
+
+Global spacing rules:
+- blocks should connect with a controlled cinematic rhythm, not with accidental blank space;
+- reduce top padding when a block follows directly from the previous idea;
+- large vertical pauses are allowed only when they are a deliberate dramatic moment;
+- avoid starting sections with a massive heading plus a large empty top gap;
+- if a block already follows a strong Hero, place the next section closer and let the visual transition carry the flow;
+- on mobile, spacing must be tighter and content should appear quickly after scroll.
+
+For future blocks, prefer compact premium density: enough air to feel expensive, but not so much that the page feels unfinished.
 
 Skill used: `$ui-ux-pro-max`
 
