@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260508-block-04-final-gaps" />
+    <link rel="stylesheet" href="./styles.css?v=20260508-block-05-method-application" />
   </head>
   <body>
     <header class="site-header" aria-label="Главная навигация">
@@ -752,6 +752,165 @@
           <p><span>02</span>Rolling volatility показывает, когда стратегия становится нестабильной.</p>
           <p><span>03</span>Gamma proxy подсвечивает чувствительность к резким изменениям структуры рынка.</p>
           <p><span>04</span>Risk profile показывает зоны, где модель зарабатывает, ломается или требует фильтра.</p>
+        </div>
+      </section>
+
+      <section class="method-application" id="method-application" aria-labelledby="method-application-title">
+        <div class="method-grid-bg" aria-hidden="true"></div>
+        <div class="method-node-field" aria-hidden="true"></div>
+
+        <div class="method-header">
+          <p class="eyebrow">Method application</p>
+          <h2 id="method-application-title">Применение методологии</h2>
+          <p>
+            Четыре направления собираются в одну рабочую поверхность: execution,
+            risk, event-driven классификация и оценка торговой деятельности.
+          </p>
+        </div>
+
+        <div class="method-surface" aria-label="Четыре направления применения методологии">
+          <article class="method-zone method-zone-large method-execution" style="--zone-index: 0">
+            <div class="method-zone-copy">
+              <span class="method-number">01</span>
+              <h3>ПРИМЕНЕНИЕ АЛГОРИТМИЧЕСКИХ МЕТОДОВ ИСПОЛНЕНИЯ</h3>
+              <p>
+                Использование моделей исполнения, основанных на инвентарных подходах
+                маркет-мейкинга и HFT-инфраструктуре, включая управление лимитной
+                ликвидностью, агрессивное/пассивное исполнение (pump/equity-driven regimes).
+              </p>
+            </div>
+
+            <button
+              class="method-image-frame method-execution-frame"
+              type="button"
+              aria-label="Открыть execution map"
+              data-open-lightbox
+              data-lightbox-src="./assets/block-05-execution-map.png"
+              data-lightbox-alt="Execution map с широким контекстом входа, выхода и торговой активности"
+            >
+              <span class="method-frame-bar" aria-hidden="true">
+                <span>execution map</span>
+                <span>entry / exit / liquidity</span>
+              </span>
+              <img
+                src="./assets/block-05-execution-map.png"
+                alt="Широкий trading screen с картой входов, выходов и контекстом исполнения"
+                width="1449"
+                height="860"
+                loading="lazy"
+              />
+            </button>
+          </article>
+
+          <article class="method-zone method-zone-large method-risk" style="--zone-index: 1">
+            <div class="method-zone-copy">
+              <span class="method-number">02</span>
+              <h3>УПРАВЛЕНИЕ РИСКАМИ</h3>
+              <p>
+                Применение классических и нелинейных моделей риск-менеджмента.
+                Использование VaR-подобных подходов, сценарных моделей, а также
+                нелинейных методов оценки хвостовых рисков и асимметрии распределений.
+              </p>
+            </div>
+
+            <div class="method-risk-stage">
+              <button
+                class="method-image-frame method-risk-main"
+                type="button"
+                aria-label="Открыть risk visual"
+                data-open-lightbox
+                data-lightbox-src="./assets/block-05-risk-hedge.jpg"
+                data-lightbox-alt="Risk visual: хедж-компромисс и выживание на экстремальных пампах"
+              >
+                <span class="method-frame-bar" aria-hidden="true">
+                  <span>risk layer</span>
+                  <span>tail survival</span>
+                </span>
+                <img
+                  src="./assets/block-05-risk-hedge.jpg"
+                  alt="Risk visual с хедж-компромиссом, метриками контроля риска и профилями устойчивости"
+                  width="1280"
+                  height="685"
+                  loading="lazy"
+                />
+              </button>
+
+              <div class="method-risk-previews" aria-label="Дополнительные risk previews">
+                <img
+                  src="./assets/block-05-risk-drawdown.jpg"
+                  alt="Net PnL vs Max Drawdown risk control zone"
+                  width="881"
+                  height="839"
+                  loading="lazy"
+                />
+                <img
+                  src="./assets/block-05-risk-blind-zones.jpg"
+                  alt="Blind zones chart with profit and loss groups"
+                  width="1280"
+                  height="585"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </article>
+
+          <article class="method-zone method-coded method-event" style="--zone-index: 2">
+            <div class="method-zone-copy">
+              <span class="method-number">03</span>
+              <h3>EVENT-DRIVEN</h3>
+              <p>
+                Классификация pump/dump-событий по типам и определение рыночных
+                режимов и структурных состояний. Классификация рыночной динамики
+                pump-driven и post-pump режимы с оценкой структурного смещения цены.
+              </p>
+            </div>
+
+            <div class="event-classifier" aria-label="Regime classifier timeline">
+              <div class="event-line" aria-hidden="true"></div>
+              <span class="event-node event-node-pump">pump</span>
+              <span class="event-node event-node-dump">dump</span>
+              <span class="event-node event-node-post">post-pump</span>
+              <span class="event-label event-label-displacement">structural displacement</span>
+              <span class="event-label event-label-regime">regime state</span>
+            </div>
+          </article>
+
+          <article class="method-zone method-coded method-review" style="--zone-index: 3">
+            <div class="method-zone-copy">
+              <span class="method-number">04</span>
+              <h3>ОЦЕНКА ТОРГОВОЙ ДЕЯТЕЛЬНОСТИ</h3>
+              <p>
+                Анализ эффективности исполнения и торговых стратегий с применением
+                AI-методологии.
+              </p>
+            </div>
+
+            <div class="trade-review-dashboard" aria-label="Trading activity assessment dashboard">
+              <div>
+                <span>execution quality</span>
+                <strong>87%</strong>
+              </div>
+              <div>
+                <span>trade review</span>
+                <strong>AI</strong>
+              </div>
+              <div>
+                <span>PnL discipline</span>
+                <strong>stable</strong>
+              </div>
+              <div>
+                <span>risk-control quality</span>
+                <strong>tail check</strong>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="method-notes" aria-label="Короткие пояснения к методологии">
+          <p><span>01</span>Execution map показывает, как вход, выход и ликвидность собираются в управляемую модель исполнения.</p>
+          <p><span>02</span>Risk layer показывает хвостовой риск, сценарии и зоны нестабильности.</p>
+          <p><span>03</span>Event-driven переводит pump/dump события в понятные рыночные режимы.</p>
+          <p><span>04</span>Trade review связывает статистику исполнения, PnL-дисциплину и качество риск-контроля.</p>
         </div>
       </section>
 
