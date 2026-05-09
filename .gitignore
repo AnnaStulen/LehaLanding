@@ -3,3 +3,7 @@ animations/block-01-hero/
 animations/**/node_modules/
 animations/**/renders/
 node_modules/
+.DS_Store
+*.backup-*.html
+*.backup-*.css
+*-test.html

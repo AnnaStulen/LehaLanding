@@ -14,13 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260508-block-05-method-application" />
+    <link rel="stylesheet" href="./styles.css?v=20260509-cta-strips" />
   </head>
   <body>
     <header class="site-header" aria-label="Главная навигация">
-      <a class="brand" href="#top" aria-label="Late Market Making">
+      <a class="brand" href="#top" aria-label="FinStack Academy">
         <span class="brand-mark" aria-hidden="true"></span>
-        <span>Late Market Making</span>
+        <span>FinStack Academy</span>
       </a>
       <nav class="top-nav" aria-label="Разделы лендинга">
         <a href="#program">Программа</a>
@@ -470,14 +470,11 @@
             <span>Making</span>
           </h1>
           <p class="hero-subtitle">
-            Адаптивный HFT market-making для post-pump рынков: учимся строить
-            торговый деск, где execution, inventory, risk и research работают
-            как единая система.
+            Адаптивный HFT маркет-мейкинг: торговый деск на памп-рынках.
           </p>
           <p class="hero-note">
-            Не курс про угадывание движения. Практика работы с
-            микроструктурой рынка, ликвидностью и контролем позиции в
-            live-среде.
+            Специализированый практический курс по работе с микроструктурой
+            рынка, ликвидностью и контролем позиции в среде торгового деска.
           </p>
 
           <div class="hero-actions" aria-label="Действия">
@@ -495,111 +492,132 @@
         </div>
 
         <div class="hero-visual-wrap">
-          <button
-            class="hero-visual"
-            type="button"
-            aria-label="Открыть скрин торгового терминала"
-            data-open-lightbox
-            data-lightbox-src="./assets/program-screen-1.png"
-            data-lightbox-alt="Увеличенный скрин торгового терминала"
-          >
+          <div class="hero-visual">
             <span class="visual-frame-top" aria-hidden="true">
-              <span>software desk</span>
+              <span>MARKET MAKING DESK</span>
               <span>post-pump execution</span>
             </span>
             <img
-              src="./assets/program-screen-1.png"
-              alt="Скрин торгового терминала с графиком, стаканом, тепловыми зонами и панелями данных"
-              width="1917"
-              height="1002"
+              src="./assets/block-02-regime-zoom.jpg?v=upscale-20260509"
+              alt="Фрагмент графика с импульсом, переходной зоной, post-pump участком и точками исполнения"
+              width="1630"
+              height="965"
             />
-          </button>
+          </div>
         </div>
       </section>
 
-      <section class="course-actions" id="program" aria-labelledby="course-actions-title">
-        <div class="course-actions-grid" aria-hidden="true"></div>
-        <div class="course-actions-node" aria-hidden="true"></div>
+      <section class="practice-workflow" id="program" aria-labelledby="practice-workflow-title">
+        <div class="practice-flow-grid" aria-hidden="true"></div>
+        <div class="practice-flow-node" aria-hidden="true"></div>
 
-        <div class="course-actions-copy">
-          <p class="eyebrow">Execution / Market regime logic</p>
-          <h2 id="course-actions-title">Мы работаем не с прогнозом движения, а с режимом рынка</h2>
-          <p class="section-lead">
-            Мы разбираем post-pump рынок как рабочую среду: где импульс уже
-            изменил ликвидность, где появляется execution zone и как из этого
-            собрать микроструктурное преимущество.
+        <div class="practice-intro">
+          <p class="eyebrow">Practice workflow</p>
+          <h2 id="practice-workflow-title">Практико-ориентированная модель обучения</h2>
+          <p>
+            Обучение построено на базово необходимом теоретическом фундаменте с быстрым переходом к
+            практической работе в рыночной среде.
           </p>
-
-          <div class="regime-route" aria-label="Маршрут работы на курсе">
-            <span style="--route-index: 0">режим</span>
-            <span style="--route-index: 1">ликвидность</span>
-            <span style="--route-index: 2">execution</span>
-            <span style="--route-index: 3">inventory</span>
-            <span style="--route-index: 4">risk review</span>
-          </div>
-
-          <div class="course-actions-list" aria-label="Что учимся делать">
-            <div style="--item-index: 0">
-              <span>01</span>
-              <p>Отличать pump, transition и post-pump состояние рынка.</p>
-            </div>
-            <div style="--item-index: 1">
-              <span>02</span>
-              <p>Находить execution zone и строить пассивную ликвидность.</p>
-            </div>
-            <div style="--item-index: 2">
-              <span>03</span>
-              <p>Комбинировать агрессивное и пассивное исполнение.</p>
-            </div>
-            <div style="--item-index: 3">
-              <span>04</span>
-              <p>Управлять инвентарем и заранее видеть деградацию риска.</p>
-            </div>
-          </div>
         </div>
 
-        <div class="regime-visual" aria-label="Схема рыночного режима">
-          <div class="regime-terminal-bar">
-            <span>live chart fragment</span>
-            <span>post-pump execution map</span>
-          </div>
-          <div class="regime-chart-frame">
-            <img
-              src="./assets/block-02-regime-zoom.jpg"
-              alt="Фрагмент графика с импульсом, переходной зоной, post-pump участком и точками исполнения"
-              width="1280"
-              height="754"
-              loading="lazy"
-            />
-            <span class="zone-line zone-line-pump" aria-hidden="true"></span>
-            <span class="zone-line zone-line-transition" aria-hidden="true"></span>
-            <span class="zone-line zone-line-post" aria-hidden="true"></span>
-            <span class="zone-focus zone-focus-pump" aria-hidden="true"></span>
-            <span class="zone-focus zone-focus-transition" aria-hidden="true"></span>
-            <span class="zone-focus zone-focus-post" aria-hidden="true"></span>
-            <span class="zone-focus zone-focus-execution" aria-hidden="true"></span>
-            <span class="zone-label zone-label-pump" data-zone="pump">pump</span>
-            <span class="zone-label zone-label-transition" data-zone="transition">transition</span>
-            <span class="zone-label zone-label-post" data-zone="post">post-pump</span>
-            <span class="execution-zone" data-zone="execution">execution zone</span>
-          </div>
-          <div class="zone-legend" aria-label="Зоны на графике">
-            <span>pump</span>
-            <span>transition</span>
-            <span>post-pump</span>
-            <span>execution zone</span>
-          </div>
-          <div class="regime-context-strip">
-            <img
-              src="./assets/block-02-regime-wide.png"
-              alt="Широкий контекст торгового экрана с журналом сделок и графиком"
-              width="1449"
-              height="860"
-              loading="lazy"
-            />
-            <p>
-              Сначала читаем состояние рынка, затем выбираем логику исполнения.
-            </p>
+        <div class="practice-story-layout">
+          <aside class="practice-story-index" aria-label="Главы блока">
+            <span><b>01</b> Live data</span>
+            <span><b>02</b> Team desk</span>
+            <span><b>03</b> Trade review</span>
+            <span><b>04</b> Risk plan</span>
+            <span><b>05</b> Exposure</span>
+            <span><b>06</b> Discipline</span>
+            <span><b>07</b> Quant infra</span>
+          </aside>
+
+          <div class="practice-story-chapters">
+            <article class="practice-story-chapter">
+              <span class="practice-chapter-dot">01</span>
+              <div class="practice-chapter-panel">
+                <span class="practice-mini-label">Live data</span>
+                <h3>Реальные рыночные данные и модели исполнения</h3>
+                <p>
+                  Основной акцент сделан на формирование прикладных навыков через работу с реальными
+                  рыночными данными, торговыми журналами и моделями исполнения в условиях live-рынка.
+                </p>
+              </div>
+            </article>
+
+            <article class="practice-story-chapter">
+              <span class="practice-chapter-dot">02</span>
+              <div class="practice-chapter-panel">
+                <span class="practice-mini-label">Team desk</span>
+                <h3>Командная среда</h3>
+                <p>
+                  Трейдеры работают в командной среде, проходят регулярный разбор сделок (trade review),
+                  анализируют статистику исполнения, PnL-дисциплину и качество риск-контроля.
+                </p>
+              </div>
+            </article>
+
+            <article class="practice-story-chapter">
+              <span class="practice-chapter-dot">03</span>
+              <div class="practice-chapter-panel">
+                <span class="practice-mini-label">Trade review</span>
+                <h3>Решения в неопределённости и высокой волатильности</h3>
+                <p>
+                  Развивается способность принимать решения в условиях неопределённости и высокой
+                  волатильности.
+                </p>
+              </div>
+            </article>
+
+            <article class="practice-story-chapter">
+              <span class="practice-chapter-dot">04</span>
+              <div class="practice-chapter-panel">
+                <span class="practice-mini-label">Risk plan</span>
+                <h3>Планирование торговли и рыночная оценка</h3>
+                <p>
+                  Дополнительно используется классическая система планирования торговли, рыночной оценки
+                  и риск-менеджмента, основанная на институциональных подходах (position sizing, exposure
+                  control, scenario-based risk planning).
+                </p>
+              </div>
+            </article>
+
+            <article class="practice-story-chapter">
+              <span class="practice-chapter-dot">05</span>
+              <div class="practice-chapter-panel">
+                <span class="practice-mini-label">Exposure control</span>
+                <h3>Масштабируемая структура управления рисками</h3>
+                <p>
+                  Программа включает работу с масштабируемой структурой управления рисками на
+                  мульти-рыночных инструментах, включая контроль экспозиции.
+                </p>
+              </div>
+            </article>
+
+            <article class="practice-story-chapter">
+              <span class="practice-chapter-dot">06</span>
+              <div class="practice-chapter-panel">
+                <span class="practice-mini-label">Discipline proof</span>
+                <h3>Отстроенная практическая модель</h3>
+                <p>
+                  Практическая модель уже отстроена и подтверждает результативность: около 75% трейдеров
+                  демонстрируют устойчивую положительную динамику в рамках программы при соблюдении
+                  торговой дисциплины и риск-параметров.
+                </p>
+              </div>
+            </article>
+
+            <article class="practice-story-chapter">
+              <span class="practice-chapter-dot">07</span>
+              <div class="practice-chapter-panel">
+                <span class="practice-mini-label">Quant infra</span>
+                <h3>Профессиональные подходы prop-trading и quant-инфраструктур</h3>
+                <p>
+                  Методология выстроена на базе профессиональных подходов, применяемых в
+                  проп-трейдинговых и квант-инфраструктурах США и международных торговых компаний:
+                  поэтапное развитие от execution-уровня до системного управления стратегиями и риском.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -610,55 +628,114 @@
         <div class="software-kicker">
           <p class="eyebrow">Software command surface</p>
           <div class="software-kicker-line"></div>
-          <span>research / infrastructure</span>
+          <span>desk infrastructure</span>
         </div>
 
-        <div class="software-visual-shell">
-          <button
-            class="software-visual"
-            type="button"
-            aria-label="Открыть скрин программного комплекса"
-            data-open-lightbox
-            data-lightbox-src="./assets/block-03-software-complex.png"
-            data-lightbox-alt="Увеличенный скрин программного комплекса с рабочим торговым деском"
-          >
-            <span class="software-terminal-bar" aria-hidden="true">
-              <span>live-market workflow</span>
-              <span>execution / risk / review</span>
-            </span>
-            <img
-              src="./assets/block-03-software-complex.png"
-              alt="Широкий скрин программного комплекса с графиками, стаканом, таблицами, идеями и рыночными панелями"
-              width="2048"
-              height="994"
-              loading="lazy"
-            />
-          </button>
+        <div class="software-stage">
+          <div class="software-console" aria-labelledby="software-complex-title">
+            <h2 id="software-complex-title">Программный комплекс</h2>
+            <p class="software-console-thesis">
+              Специализированная инфраструктура, с которой начинается обучение:
+              освоение торговых систем, инструментов исполнения, аналитических
+              интерфейсов и модулей управления риском и позицией.
+            </p>
+          </div>
 
-          <button class="software-callout callout-market" type="button" data-software-zone="market">
-            <span>Market data</span>
-            поток, стакан, volume
-          </button>
-          <button class="software-callout callout-risk" type="button" data-software-zone="risk">
-            <span>Risk layer</span>
-            позиция и деградация риска
-          </button>
-          <button class="software-callout callout-execution" type="button" data-software-zone="execution">
-            <span>Execution terminal</span>
-            работа не в теории, а в среде
-          </button>
-          <button class="software-callout callout-review" type="button" data-software-zone="review">
-            <span>Trade review</span>
-            разбор решений после рынка
-          </button>
+          <div class="software-visual-shell">
+            <div
+              class="software-visual software-visual-program"
+            >
+              <span class="software-terminal-bar" aria-hidden="true">
+                <span>live-market workflow</span>
+                <span>execution / risk / review</span>
+              </span>
+              <img
+                src="./assets/program-screen-1.png"
+                alt="Скрин программного комплекса с графиком, стаканом, торговыми зонами и панелями данных"
+                width="3834"
+                height="2004"
+                loading="lazy"
+              />
+            </div>
+
+            <span class="software-focus focus-desk" aria-hidden="true"></span>
+            <span class="software-focus focus-execution" aria-hidden="true"></span>
+            <span class="software-focus focus-analytics" aria-hidden="true"></span>
+            <span class="software-focus focus-inventory" aria-hidden="true"></span>
+
+            <div class="software-hint hint-desk">
+              <span>Control panel</span>
+              <p>Панель конфигураций, счетчики и состояния алгоритмов перед запуском исполнения.</p>
+            </div>
+            <div class="software-hint hint-execution">
+              <span>Order flow</span>
+              <p>Стаканы, flow-ленты и лимитная ликвидность для работы с исполнением.</p>
+            </div>
+            <div class="software-hint hint-analytics">
+              <span>Liquidity map</span>
+              <p>Тепловые зоны и FlowScape помогают видеть плотность ликвидности.</p>
+            </div>
+            <div class="software-hint hint-inventory">
+              <span>Chart review</span>
+              <p>Нижние графики показывают реакцию цены, контекст позиции и качество решений.</p>
+            </div>
+          </div>
+
+          <div class="software-meaning-grid" aria-label="Software complex modules">
+            <article class="software-mini-panel">
+              <span>01</span>
+              <h3>Professional trading desk</h3>
+              <p>Рабочая среда для market data, order flow и контекста торгового деска.</p>
+            </article>
+            <article class="software-mini-panel">
+              <span>02</span>
+              <h3>Algorithmic execution</h3>
+              <p>Инструменты для пассивного и агрессивного исполнения.</p>
+            </article>
+            <article class="software-mini-panel">
+              <span>03</span>
+              <h3>Analytics</h3>
+              <p>Интерфейсы для анализа режима, ликвидности и performance review.</p>
+            </article>
+            <article class="software-mini-panel">
+              <span>04</span>
+              <h3>Inventory</h3>
+              <p>Позиция, exposure и risk state видны во время работы.</p>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="research-edge" aria-labelledby="research-edge-title">
         <div class="research-edge-grid" aria-hidden="true"></div>
         <div class="research-edge-node" aria-hidden="true"></div>
+        <div class="research-section-divider" aria-hidden="true">
+          <span>research layer</span>
+          <i class="research-divider-sweep"></i>
+        </div>
 
         <div class="research-media-stack">
+          <div class="research-console" aria-labelledby="research-edge-title">
+            <div class="research-console-head">
+              <p class="eyebrow">Strategy validation</p>
+              <span>Not signals. System validation.</span>
+            </div>
+            <h2 id="research-edge-title">Research и научное преимущество</h2>
+            <p class="research-thesis">
+              Направление, сфокусированное на работе с профессиональными моделями
+              из области микроструктурного и количественного исследования рынка.
+            </p>
+            <div class="research-status-row" aria-label="Research status labels">
+              <span>equity curve</span>
+              <span>tail risk</span>
+              <span>stress zone</span>
+            </div>
+            <p class="research-formula">
+              Интерпретация, применение и адаптация готовых исследовательских моделей
+              в торговых решениях.
+            </p>
+          </div>
+
           <div class="research-video-shell tech-proof-frame">
             <div class="research-frame-bar" aria-hidden="true">
               <span>Research layer</span>
@@ -675,49 +752,44 @@
               aria-label="Research visualization with equity curve, PnL distribution, volatility regime and risk profile"
             ></video>
           </div>
-
-          <div class="research-console" aria-labelledby="research-edge-title">
-            <div class="research-console-head">
-              <p class="eyebrow">Strategy validation</p>
-              <span>Not signals. System validation.</span>
-            </div>
-            <h2 id="research-edge-title">Research и научное преимущество</h2>
-            <p class="research-thesis">
-              Мы проверяем стратегию как модель: через распределение результата, волатильность,
-              чувствительность к импульсам и профиль риска.
-            </p>
-            <div class="research-status-row" aria-label="Research status labels">
-              <span>equity curve</span>
-              <span>tail risk</span>
-              <span>stress zone</span>
-            </div>
-            <p class="research-formula">
-              Мы не верим стратегии — мы проверяем, где она работает, где ломается и какой риск несет.
-            </p>
-          </div>
         </div>
 
         <div class="research-proof-stack" aria-label="Research proof materials">
-          <figure class="research-proof-card tech-proof-frame">
-            <div class="research-frame-bar" aria-hidden="true">
+          <figure class="research-proof-card research-proof-card-wide tech-proof-frame">
+            <!-- <div class="research-frame-bar" aria-hidden="true">
               <span>PnL distribution</span>
               <span>equity / stability</span>
-            </div>
+            </div> -->
             <img
-              src="./assets/block-04-research-01.jpg"
-              alt="Research chart with equity curve and PnL distribution"
-              width="1280"
-              height="720"
+              src="./assets/00c51a62-889a-4f74-9c45-b74a68d591bf.png"
+              alt="Research chart with market microstructure model"
+              width="629"
+              height="470"
               loading="lazy"
             />
-            <figcaption>Equity curve показывает не только рост, но и качество траектории.</figcaption>
+            <!-- <figcaption>Equity curve показывает не только рост, но и качество траектории.</figcaption> -->
+          </figure>
+
+          <figure class="research-proof-card research-proof-card-wide tech-proof-frame">
+            <!-- <div class="research-frame-bar" aria-hidden="true">
+              <span>PnL distribution</span>
+              <span>equity / stability</span>
+            </div> -->
+            <img
+              src="./assets/0747d5c9-7d9c-49fb-9729-578b4ac57f05.png"
+              alt="Research chart with quantitative market model"
+              width="629"
+              height="470"
+              loading="lazy"
+            />
+            <!-- <figcaption>Equity curve показывает не только рост, но и качество траектории.</figcaption> -->
           </figure>
 
           <figure class="research-proof-card tech-proof-frame">
-            <div class="research-frame-bar" aria-hidden="true">
+            <!-- <div class="research-frame-bar" aria-hidden="true">
               <span>Volatility regime</span>
               <span>risk boundary</span>
-            </div>
+            </div> -->
             <img
               src="./assets/block-04-research-02.jpg"
               alt="Research chart with volatility, gamma proxy and risk profile"
@@ -725,15 +797,9 @@
               height="720"
               loading="lazy"
             />
-            <figcaption>Risk profile показывает границы, где модель зарабатывает, ломается или требует фильтра.</figcaption>
+            <!-- <figcaption>Risk profile показывает границы, где модель зарабатывает, ломается или требует фильтра.</figcaption> -->
           </figure>
 
-          <a class="research-telegram-cta" href="#contact" aria-label="Связаться в Telegram">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M21.7 4.2 18.5 19c-.2 1-.8 1.2-1.6.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 12.8 1.7 11.3c-1-.3-1-1 .2-1.5L20.3 2.7c.8-.3 1.6.2 1.4 1.5Z" />
-            </svg>
-            <span>Связаться в Telegram</span>
-          </a>
         </div>
 
         <div class="research-chip-console" aria-label="Research validation elements">
@@ -753,6 +819,29 @@
           <p><span>03</span>Gamma proxy подсвечивает чувствительность к резким изменениям структуры рынка.</p>
           <p><span>04</span>Risk profile показывает зоны, где модель зарабатывает, ломается или требует фильтра.</p>
         </div>
+
+        <figure class="research-full-visual tech-proof-frame">
+          <img
+            src="./assets/block-03-software-complex.png"
+            alt="Полноразмерный экран программного комплекса с торговым деском, аналитикой и модулями управления"
+            width="5102"
+            height="2446"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <section class="research-cta-strip" aria-label="Связаться после research-блока">
+        <div>
+          <p class="eyebrow">Research discussion</p>
+          <h2>Обсудить программу и формат участия</h2>
+        </div>
+        <a class="research-telegram-cta" href="#contact" aria-label="Связаться в Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21.7 4.2 18.5 19c-.2 1-.8 1.2-1.6.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 12.8 1.7 11.3c-1-.3-1-1 .2-1.5L20.3 2.7c.8-.3 1.6.2 1.4 1.5Z" />
+          </svg>
+          <span>Связаться в Telegram</span>
+        </a>
       </section>
 
       <section class="method-application" id="method-application" aria-labelledby="method-application-title">
@@ -761,11 +850,19 @@
 
         <div class="method-header">
           <p class="eyebrow">Method application</p>
-          <h2 id="method-application-title">Применение методологии</h2>
-          <p>
-            Четыре направления собираются в одну рабочую поверхность: execution,
-            risk, event-driven классификация и оценка торговой деятельности.
-          </p>
+          <h2 id="method-application-title">Методология</h2>
+          <div class="method-header-copy">
+            <p>
+              Извлечение торгового-рыночного преимущества на микро-структурном
+              уровне в пост-памповых состояниях рынка.
+            </p>
+            <ul>
+              <li>селекция конкретного рыночного режима;</li>
+              <li>управление инвентарём;</li>
+              <li>конструирование архитектуры пассивной ликвидности;</li>
+              <li>контролируемая деградация риска.</li>
+            </ul>
+          </div>
         </div>
 
         <div class="method-surface" aria-label="Четыре направления применения методологии">
@@ -800,6 +897,27 @@
                 loading="lazy"
               />
             </button>
+
+            <button
+              class="method-image-frame method-execution-frame method-execution-secondary"
+              type="button"
+              aria-label="Открыть execution support visual"
+              data-open-lightbox
+              data-lightbox-src="./assets/2026-05-09 02.21.02-enhanced.png"
+              data-lightbox-alt="Дополнительный execution visual с рыночной структурой и зонами исполнения"
+            >
+              <span class="method-frame-bar" aria-hidden="true">
+                <span>execution support</span>
+                <span>market structure</span>
+              </span>
+              <img
+                src="./assets/2026-05-09 02.21.02-enhanced.png"
+                alt="Дополнительный execution visual с рыночной структурой и зонами исполнения"
+                width="1847"
+                height="852"
+                loading="lazy"
+              />
+            </button>
           </article>
 
           <article class="method-zone method-zone-large method-risk" style="--zone-index: 1">
@@ -822,7 +940,7 @@
                 data-lightbox-src="./assets/block-05-risk-hedge.jpg"
                 data-lightbox-alt="Risk visual: хедж-компромисс и выживание на экстремальных пампах"
               >
-                <span class="method-frame-bar" aria-hidden="true">
+                <span class="method-external-frame-bar" aria-hidden="true">
                   <span>risk layer</span>
                   <span>tail survival</span>
                 </span>
@@ -835,14 +953,18 @@
                 />
               </button>
 
-              <div class="method-risk-previews" aria-label="Дополнительные risk previews">
-                <img
-                  src="./assets/block-05-risk-drawdown.jpg"
-                  alt="Net PnL vs Max Drawdown risk control zone"
-                  width="881"
-                  height="839"
-                  loading="lazy"
-                />
+              <button
+                class="method-image-frame method-risk-secondary"
+                type="button"
+                aria-label="Открыть blind zones risk visual"
+                data-open-lightbox
+                data-lightbox-src="./assets/block-05-risk-blind-zones.jpg"
+                data-lightbox-alt="Blind zones chart with profit and loss groups"
+              >
+                <span class="method-external-frame-bar" aria-hidden="true">
+                  <span>blind zones</span>
+                  <span>profit / loss groups</span>
+                </span>
                 <img
                   src="./assets/block-05-risk-blind-zones.jpg"
                   alt="Blind zones chart with profit and loss groups"
@@ -850,7 +972,7 @@
                   height="585"
                   loading="lazy"
                 />
-              </div>
+              </button>
             </div>
           </article>
 
@@ -865,14 +987,26 @@
               </p>
             </div>
 
-            <div class="event-classifier" aria-label="Regime classifier timeline">
-              <div class="event-line" aria-hidden="true"></div>
-              <span class="event-node event-node-pump">pump</span>
-              <span class="event-node event-node-dump">dump</span>
-              <span class="event-node event-node-post">post-pump</span>
-              <span class="event-label event-label-displacement">structural displacement</span>
-              <span class="event-label event-label-regime">regime state</span>
-            </div>
+            <button
+              class="method-image-frame method-event-frame"
+              type="button"
+              aria-label="Открыть event-driven visual"
+              data-open-lightbox
+              data-lightbox-src="./assets/block-05-event-driven.png"
+              data-lightbox-alt="Event-driven visual с рыночной классификацией и пост-памповым состоянием"
+            >
+              <span class="method-frame-bar" aria-hidden="true">
+                <span>event-driven</span>
+                <span>post-pump state</span>
+              </span>
+              <img
+                src="./assets/block-05-event-driven.png"
+                alt="Event-driven visual с рыночной классификацией и пост-памповым состоянием"
+                width="1280"
+                height="657"
+                loading="lazy"
+              />
+            </button>
           </article>
 
           <article class="method-zone method-coded method-review" style="--zone-index: 3">
@@ -914,23 +1048,166 @@
         </div>
       </section>
 
-      <section class="section-preview" id="pricing" aria-labelledby="pricing-title">
-        <p class="eyebrow">Тарифы</p>
-        <h2 id="pricing-title">$1000 / $4700 / $10,000</h2>
-        <p>
-          Прайсинг будет собран отдельным блоком: Minimal, Main и VIP, с
-          выделением основного тарифа.
+      <section class="pricing-section" id="pricing" aria-labelledby="pricing-title">
+        <div class="pricing-header">
+          <p class="eyebrow">Тарифы</p>
+          <h2 id="pricing-title">Выбери свой формат обучения</h2>
+          <p>
+            Это программа для серьезных намерений: результат зависит от того,
+            насколько глубоко ты готов работать с материалами, практикой,
+            аналитикой и торговой дисциплиной.
+          </p>
+        </div>
+
+        <div class="pricing-grid" aria-label="Три тарифных плана">
+          <article class="pricing-card">
+            <div class="pricing-card-head">
+              <span class="pricing-plan-label">Self-guided</span>
+              <h3>Все сам</h3>
+              <strong>$&#8201;1&#8239;000</strong>
+            </div>
+            <p class="pricing-card-intro">Для тех, кто хочет пройти курс обучения самостоятельно.</p>
+            <ul>
+              <li>Доступ к учебной платформе.</li>
+              <li>Доступ ко всем учебным материалам.</li>
+              <li>Доступ на время обучения к аналитической платформе.</li>
+              <li>Доступ к платформе trading desk.</li>
+              <li>Самостоятельное прохождение программы.</li>
+              <li class="pricing-muted">Без проверки домашних заданий.</li>
+              <li class="pricing-muted">Без комьюнити, live-сессий и обратной связи.</li>
+            </ul>
+            <a class="pricing-card-cta" href="#contact">Выбрать тариф</a>
+          </article>
+
+          <article class="pricing-card pricing-card-featured">
+            <div class="pricing-badge">Recommended</div>
+            <div class="pricing-card-head">
+              <span class="pricing-plan-label">Main format</span>
+              <h3>Professional</h3>
+              <strong>$&#8201;4&#8239;700</strong>
+            </div>
+            <p class="pricing-card-intro">
+              Основной рекомендуемый формат для тех, кто действительно хочет
+              получить торговое преимущество на рынке.
+            </p>
+            <ul>
+              <li>Все из тарифа «Все сам».</li>
+              <li>Проверка домашних заданий и контроль прогресса.</li>
+              <li>Доступ к комьюнити.</li>
+              <li>Онлайн live-сессии.</li>
+              <li>Обратная связь по ключевым этапам обучения.</li>
+              <li>Аналитика по трейдам и разбор торговых ошибок.</li>
+              <li>Экзамен по итогам прохождения.</li>
+              <li>Приглашение в prop-business для сильных участников.</li>
+            </ul>
+            <a class="pricing-card-cta pricing-card-cta-primary" href="#contact">Выбрать Professional</a>
+          </article>
+
+          <article class="pricing-card">
+            <div class="pricing-card-head">
+              <span class="pricing-plan-label">Private desk</span>
+              <h3>VIP</h3>
+              <strong>$&#8201;10&#8239;000</strong>
+            </div>
+            <p class="pricing-card-intro">
+              Индивидуальное обучение и сопровождение для максимального
+              погружения в формат trading/research desk.
+            </p>
+            <ul>
+              <li>Все из тарифа Professional.</li>
+              <li>Индивидуальная траектория обучения.</li>
+              <li>Персональное сопровождение.</li>
+              <li>Приоритетная обратная связь.</li>
+              <li>Индивидуальные live-сессии.</li>
+              <li>Глубокий разбор торговых решений.</li>
+              <li>Работа с research-моделями под задачи участника.</li>
+              <li>Фокус на execution, risk, inventory и дисциплину.</li>
+            </ul>
+            <a class="pricing-card-cta" href="#contact">Выбрать VIP</a>
+          </article>
+        </div>
+
+        <p class="pricing-disclaimer">
+          Курс не обещает гарантированный доход. Он дает систему, инструменты и
+          практику, а результат зависит от дисциплины, исполнения и соблюдения
+          риск-параметров.
         </p>
       </section>
+
+      <section class="research-cta-strip footer-question-cta" aria-label="Остались вопросы">
+        <div>
+          <p class="eyebrow">Final contact</p>
+          <h2>Остались вопросы?</h2>
+        </div>
+        <a class="research-telegram-cta" href="#contact" aria-label="Связаться в Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21.7 4.2 18.5 19c-.2 1-.8 1.2-1.6.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 12.8 1.7 11.3c-1-.3-1-1 .2-1.5L20.3 2.7c.8-.3 1.6.2 1.4 1.5Z" />
+          </svg>
+          <span>Связаться в Telegram</span>
+        </a>
+      </section>
     </main>
+
+    <footer class="site-footer" id="contact" aria-label="Footer">
+      <div class="footer-inner">
+        <div class="footer-divider" aria-hidden="true">
+          <span>contact / documents</span>
+          <i class="footer-divider-sweep"></i>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-brand-block">
+            <a class="footer-brand" href="#top" aria-label="FinStack Academy">
+              <span class="brand-mark" aria-hidden="true"></span>
+              <span>FinStack Academy</span>
+            </a>
+            <p>
+              Практическая программа по Late Market Making: execution,
+              inventory, risk, research и дисциплина работы с торговой системой.
+            </p>
+            <a class="footer-contact" href="https://t.me/" aria-label="Связаться в Telegram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M21.7 4.2 18.5 19c-.2 1-.8 1.2-1.6.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 12.8 1.7 11.3c-1-.3-1-1 .2-1.5L20.3 2.7c.8-.3 1.6.2 1.4 1.5Z" />
+              </svg>
+              <span>Связаться в Telegram</span>
+            </a>
+          </div>
+
+          <nav class="footer-link-group" aria-label="Навигация">
+            <h2>Навигация</h2>
+            <a href="#program">Программа</a>
+            <a href="#method-application">Методология</a>
+            <a href="#pricing">Тарифы</a>
+            <a href="#contact">Telegram</a>
+          </nav>
+
+          <nav class="footer-link-group" aria-label="Документы">
+            <h2>Документы</h2>
+            <a href="#contact">Privacy</a>
+            <a href="#contact">Terms / Offer</a>
+            <a href="#contact">Refund</a>
+            <a href="#contact">Risk Disclaimer</a>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            Материалы курса не являются инвестиционной рекомендацией. Торговля на
+            финансовых рынках связана с риском, а результат зависит от дисциплины,
+            исполнения и соблюдения риск-параметров.
+          </p>
+          <span>© 2026 FinStack Academy. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
 
     <div class="lightbox" role="dialog" aria-modal="true" aria-label="Скрин торгового терминала" hidden>
       <button class="lightbox-close" type="button" aria-label="Закрыть" data-close-lightbox>Закрыть</button>
       <img
-        src="./assets/program-screen-1.png"
-        alt="Увеличенный скрин торгового терминала"
-        width="1917"
-        height="1002"
+        src="./assets/block-02-regime-zoom.jpg?v=upscale-20260509"
+        alt="Увеличенный фрагмент графика с post-pump execution zone"
+        width="1630"
+        height="965"
         data-lightbox-image
       />
     </div>
