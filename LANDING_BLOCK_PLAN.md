@@ -41,7 +41,8 @@ If a prompt says to improve hover, motion, glow, depth, background animation, or
 
 Rules:
 
-- Block 1 Hero main asset is only `program screen 1.png` / `assets/program-screen-1.png`;
+- Block 1 Hero uses `program screen 1.png` / `assets/program-screen-1.png`;
+- Block 3 Программный комплекс also uses `program screen 1.png` / `assets/program-screen-1.png` as its current main software visual by explicit latest direction;
 - Block 2 main asset is only `вход выход приблизили.jpg`;
 - `вход выход большой.png` was secondary context for Block 2 and is now allowed as the locked execution visual for Block 5;
 - images from `вдохновение` are references only unless a block explicitly says to use them as production assets;
@@ -70,7 +71,7 @@ Allowed:
 - thin callout lines;
 - hover zoom;
 - local dark backgrounds only under small labels/callouts;
-- click-to-zoom / lightbox.
+- click-to-zoom / lightbox only when a block explicitly asks for it. Block 3 main visual `assets/program-screen-1.png` does not use click-to-zoom.
 
 Before a screenshot block is considered done, verify computed CSS:
 
@@ -229,8 +230,9 @@ What to give in a new chat:
 - `index.html`
 - `styles.css`
 - `script.js`
-- `видсофта1.png`
-- optional secondary only: `program screen 1.png`
+- `program screen 1.png`
+- `assets/program-screen-1.png`
+- optional secondary only: `видсофта1.png` / `assets/block-03-software-complex.png`
 
 Purpose:
 
@@ -238,27 +240,26 @@ Show that the course is built around specialized trading/research infrastructure
 
 Main asset locked:
 
-`видсофта1.png`
+`program screen 1.png` / `assets/program-screen-1.png`
 
 Secondary asset only:
 
-`program screen 1.png` / `assets/program-screen-1.png`
+`видсофта1.png` / `assets/block-03-software-complex.png`
 
-Do not replace Block 3 main visual with Block 1 or Block 2 images.
+Do not replace Block 3 main visual with Block 2 images.
 
 What is planned:
 
 - no standard left-text/right-image layout;
 - start with one wide software visual across the landing width;
-- use `видсофта1.png` as the main full-width software screen;
-- copy it into `assets` as `block-03-software-complex.png`;
-- keep `видсофта1.png` visually close to the original: readable, bright enough, not hidden under black overlay;
+- use `assets/program-screen-1.png` as the main full-width software screen;
+- keep `program screen 1.png` visually close to the original: readable, bright enough, not hidden under black overlay;
 - use local dark label backgrounds only where text sits on top of the screenshot;
 - add a living layer of text around/over/under the visual;
 - text should feel like a trading desk console, not Google Docs;
 - use mixed-size text states, technical labels, floating tags, callouts, mini-panels;
 - add hover/zoom/glow interactions for the software frame, callouts, and mini-panels;
-- optional click-to-zoom/lightbox for the software screen;
+- no click-to-zoom/lightbox for the main software screen;
 - black premium fintech style;
 - deep dark-blue neon accent;
 - square technical frames;
@@ -268,7 +269,7 @@ What is planned:
 Result:
 
 - Block 3 is completed in the landing workflow.
-- Main asset was copied to `assets/block-03-software-complex.png`.
+- Current main asset is `assets/program-screen-1.png`.
 - Next block: Block 4, Research и научное преимущество.
 
 ## Block 4
