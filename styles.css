@@ -4142,6 +4142,482 @@ h1 span {
   }
 }
 
+.outcomes-roadmap {
+  position: relative;
+  z-index: 2;
+  width: min(var(--max), calc(100% - 40px));
+  padding: clamp(46px, 5vw, 76px) 0 clamp(54px, 5.6vw, 86px);
+  margin: 0 auto;
+  overflow: hidden;
+  scroll-margin-top: 92px;
+  border-top: 1px solid rgba(0, 183, 255, 0.16);
+}
+
+.outcomes-roadmap::before {
+  position: absolute;
+  inset: 4% -16% 8% -18%;
+  z-index: -3;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at 22% 18%, rgba(0, 93, 255, 0.2), transparent 34%),
+    radial-gradient(circle at 76% 62%, rgba(0, 183, 255, 0.12), transparent 42%);
+  filter: blur(4px);
+}
+
+.outcomes-grid {
+  position: absolute;
+  inset: 12% -14% 12% 30%;
+  z-index: -4;
+  pointer-events: none;
+  opacity: 0.13;
+  background:
+    linear-gradient(90deg, rgba(0, 183, 255, 0.22) 1px, transparent 1px),
+    linear-gradient(rgba(0, 183, 255, 0.13) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(90deg, transparent, #000 24%, #000 76%, transparent);
+}
+
+.outcomes-node-field {
+  position: absolute;
+  right: -78px;
+  bottom: 8%;
+  z-index: -1;
+  width: 300px;
+  height: 210px;
+  pointer-events: none;
+  opacity: 0.17;
+  background:
+    radial-gradient(circle, rgba(0, 229, 255, 0.86) 0 2px, transparent 3px) 16px 16px / 56px 56px,
+    linear-gradient(135deg, transparent 0 28%, rgba(0, 183, 255, 0.44) 28% 29%, transparent 29% 58%, rgba(0, 93, 255, 0.36) 58% 59%, transparent 59%);
+  filter: drop-shadow(0 0 20px rgba(0, 119, 255, 0.42));
+  mask-image: linear-gradient(90deg, #000, transparent 88%);
+}
+
+.outcomes-header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(320px, 0.62fr);
+  gap: clamp(18px, 4vw, 56px);
+  align-items: end;
+  margin-bottom: clamp(22px, 3.2vw, 38px);
+}
+
+.outcomes-header .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: -6px;
+}
+
+.outcomes-header h2 {
+  max-width: 780px;
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(38px, 5.6vw, 76px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.outcomes-header p:not(.eyebrow) {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(244, 247, 251, 0.84);
+  font-size: clamp(16px, 1.25vw, 20px);
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.outcomes-system {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(360px, 0.72fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.outcomes-system::before {
+  position: absolute;
+  left: calc(58% - 12px);
+  top: 28px;
+  bottom: 28px;
+  z-index: 0;
+  width: 1px;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(180deg, transparent, rgba(0, 183, 255, 0.42), transparent);
+  box-shadow: 0 0 18px rgba(0, 183, 255, 0.22);
+}
+
+.outcomes-paths {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  perspective: 1100px;
+  transform-style: preserve-3d;
+}
+
+.outcome-path {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 286px;
+  padding: clamp(20px, 2.1vw, 28px);
+  background:
+    linear-gradient(180deg, rgba(6, 13, 24, 0.96), rgba(1, 4, 9, 0.86)),
+    radial-gradient(circle at 24% 0%, rgba(0, 119, 255, 0.22), transparent 42%),
+    linear-gradient(135deg, rgba(0, 183, 255, 0.11), transparent 54%);
+  border: 1px solid rgba(0, 183, 255, 0.34);
+  border-radius: 0;
+  box-shadow:
+    0 0 0 1px rgba(244, 247, 251, 0.035) inset,
+    0 18px 0 rgba(0, 25, 66, 0.22),
+    0 32px 82px rgba(0, 0, 0, 0.64),
+    0 0 54px rgba(0, 93, 255, 0.16);
+  outline: none;
+  transform: translateZ(0);
+  transform-origin: center bottom;
+  transition:
+    transform 260ms ease,
+    border-color 260ms ease,
+    box-shadow 260ms ease,
+    background 260ms ease,
+    filter 260ms ease;
+}
+
+.outcome-path::before {
+  position: absolute;
+  inset: 11px;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(0, 183, 255, 0.1), transparent 38%),
+    linear-gradient(90deg, rgba(0, 183, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(rgba(0, 183, 255, 0.08) 1px, transparent 1px);
+  background-size: 34px 34px;
+  border: 1px solid rgba(0, 183, 255, 0.13);
+  opacity: 0.34;
+  mask-image: linear-gradient(180deg, #000, transparent 82%);
+}
+
+.outcome-path::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, transparent 0 38%, rgba(0, 229, 255, 0.24) 48%, transparent 58% 100%),
+    linear-gradient(180deg, transparent 0, rgba(0, 183, 255, 0.34) 1px, transparent 2px),
+    linear-gradient(90deg, rgba(0, 183, 255, 0.74), transparent 28%, transparent 72%, rgba(0, 93, 255, 0.64));
+  background-size: 220% 100%, 100% 100%, 100% 100%;
+  opacity: 0.58;
+  mix-blend-mode: screen;
+  transform: translateZ(0);
+  transition:
+    background-position 320ms ease,
+    opacity 260ms ease,
+    filter 260ms ease;
+}
+
+.outcome-path > * {
+  position: relative;
+  z-index: 2;
+}
+
+.outcome-path:hover,
+.outcome-path:focus-visible {
+  background:
+    linear-gradient(180deg, rgba(9, 20, 38, 0.98), rgba(1, 7, 16, 0.9)),
+    radial-gradient(circle at 24% 0%, rgba(0, 183, 255, 0.26), transparent 44%),
+    linear-gradient(135deg, rgba(0, 183, 255, 0.18), transparent 56%);
+  border-color: rgba(0, 229, 255, 0.74);
+  box-shadow:
+    0 0 0 1px rgba(0, 229, 255, 0.14) inset,
+    0 22px 0 rgba(0, 42, 110, 0.24),
+    0 38px 92px rgba(0, 0, 0, 0.68),
+    0 0 72px rgba(0, 93, 255, 0.3),
+    0 0 28px rgba(0, 183, 255, 0.14) inset;
+  filter: saturate(1.05);
+  transform: translate3d(0, -5px, 18px) rotateX(2deg) rotateY(var(--path-tilt, -2deg));
+}
+
+.outcome-path:hover::after,
+.outcome-path:focus-visible::after {
+  background-position: -90% 0, 0 0, 0 0;
+  opacity: 0.9;
+}
+
+.outcome-path-trader {
+  --path-tilt: -2deg;
+}
+
+.outcome-path-desk {
+  --path-tilt: 2deg;
+}
+
+.outcome-path-index {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 16px;
+  padding: 7px 10px;
+  color: rgba(214, 246, 255, 0.82);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background:
+    linear-gradient(90deg, rgba(0, 183, 255, 0.13), rgba(0, 93, 255, 0.06)),
+    rgba(0, 6, 16, 0.62);
+  border: 1px solid rgba(0, 183, 255, 0.24);
+  box-shadow: 0 0 20px rgba(0, 93, 255, 0.12);
+}
+
+.outcome-path h3,
+.outcome-path p {
+  position: relative;
+  z-index: 1;
+}
+
+.outcome-path h3 {
+  max-width: 360px;
+  margin: 0 0 16px;
+  padding: 12px 13px 13px;
+  color: var(--text);
+  font-size: clamp(23px, 1.9vw, 28px);
+  line-height: 1.02;
+  letter-spacing: 0;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(0, 183, 255, 0.18), transparent 52%),
+    linear-gradient(90deg, rgba(0, 93, 255, 0.2), rgba(0, 10, 24, 0.24));
+  border-left: 2px solid rgba(0, 229, 255, 0.72);
+  box-shadow:
+    0 0 28px rgba(0, 93, 255, 0.12),
+    0 0 0 1px rgba(0, 183, 255, 0.08) inset;
+  overflow-wrap: break-word;
+}
+
+.outcome-path p {
+  max-width: 460px;
+  margin: 0;
+  color: rgba(167, 180, 200, 0.94);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.outcome-path-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.outcome-path-labels span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding: 0 8px;
+  color: rgba(214, 246, 255, 0.78);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(0, 9, 22, 0.72);
+  border: 1px solid rgba(0, 183, 255, 0.2);
+  box-shadow: 0 0 14px rgba(0, 93, 255, 0.08) inset;
+  transition:
+    color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+.outcome-path:hover .outcome-path-labels span,
+.outcome-path:focus-visible .outcome-path-labels span {
+  color: rgba(244, 251, 255, 0.92);
+  background: rgba(0, 21, 48, 0.78);
+  border-color: rgba(0, 183, 255, 0.42);
+  box-shadow: 0 0 18px rgba(0, 93, 255, 0.14) inset;
+}
+
+.roadmap-panel {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-width: 0;
+  padding: 12px;
+  background:
+    linear-gradient(180deg, rgba(5, 10, 18, 0.86), rgba(1, 4, 9, 0.78)),
+    linear-gradient(90deg, rgba(0, 183, 255, 0.08), transparent 52%, rgba(0, 93, 255, 0.08));
+  border: 1px solid rgba(0, 183, 255, 0.26);
+  border-radius: 0;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+    0 24px 70px rgba(0, 0, 0, 0.5);
+}
+
+.roadmap-panel::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(105deg, transparent 0 38%, rgba(0, 183, 255, 0.14) 48%, transparent 58% 100%);
+  background-size: 220% 100%;
+  animation: roadmapPanelSweep 7s ease-in-out infinite;
+}
+
+.roadmap-panel-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 2px 2px 10px;
+  color: rgba(214, 246, 255, 0.82);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 183, 255, 0.18);
+}
+
+.roadmap-modules {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.roadmap-modules::before {
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  bottom: 16px;
+  width: 1px;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(180deg, transparent, rgba(0, 183, 255, 0.36), transparent);
+  transform: translateX(-50%);
+}
+
+.roadmap-modules li {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 54px;
+  padding: 10px;
+  background: rgba(1, 7, 16, 0.72);
+  border: 1px solid rgba(0, 183, 255, 0.17);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.015) inset;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.roadmap-modules li::before {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  pointer-events: none;
+  content: "";
+  background: var(--cyan);
+  border: 1px solid rgba(244, 247, 251, 0.68);
+  box-shadow: 0 0 14px rgba(0, 183, 255, 0.46);
+  transform: translateY(-50%);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.roadmap-modules li::after {
+  position: absolute;
+  left: 46px;
+  right: 10px;
+  top: 50%;
+  height: 1px;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(90deg, rgba(0, 183, 255, 0.54), transparent);
+  opacity: 0.26;
+  transform: translateY(-50%) scaleX(0.3);
+  transform-origin: left center;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.roadmap-modules li:hover {
+  background: rgba(3, 13, 28, 0.9);
+  border-color: rgba(0, 183, 255, 0.52);
+  box-shadow:
+    0 0 0 1px rgba(0, 183, 255, 0.08) inset,
+    0 0 28px rgba(0, 93, 255, 0.16);
+  transform: translate3d(0, -2px, 0);
+}
+
+.roadmap-modules li:hover::before {
+  box-shadow:
+    0 0 12px rgba(244, 247, 251, 0.7),
+    0 0 26px rgba(0, 183, 255, 0.74);
+  transform: translateY(-50%) scale(1.25);
+}
+
+.roadmap-modules li:hover::after {
+  opacity: 0.8;
+  transform: translateY(-50%) scaleX(1);
+}
+
+.roadmap-modules span {
+  position: relative;
+  z-index: 1;
+  padding-left: 10px;
+  color: rgba(0, 183, 255, 0.78);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.roadmap-modules strong {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  color: rgba(244, 247, 251, 0.9);
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+@keyframes roadmapPanelSweep {
+  0%,
+  24% {
+    background-position: 120% 0;
+  }
+
+  58% {
+    background-position: -120% 0;
+  }
+
+  100% {
+    background-position: -120% 0;
+  }
+}
+
 .pricing-section {
   position: relative;
   z-index: 2;
@@ -4911,6 +5387,46 @@ h1 span {
     display: block;
   }
 
+  .outcomes-roadmap {
+    width: calc(100% - 28px);
+    max-width: var(--max);
+  }
+
+  .outcomes-header {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .outcomes-header .eyebrow {
+    grid-column: auto;
+    margin-bottom: 0;
+  }
+
+  .outcomes-system,
+  .outcomes-paths {
+    grid-template-columns: 1fr;
+  }
+
+  .outcomes-system::before {
+    left: 28px;
+    top: 220px;
+    bottom: 32px;
+  }
+
+  .outcomes-paths {
+    perspective: none;
+  }
+
+  .outcome-path {
+    min-height: 210px;
+    transform: none;
+  }
+
+  .outcome-path:hover,
+  .outcome-path:focus-visible {
+    transform: translate3d(0, -3px, 0);
+  }
+
   .participant-proof-header {
     margin-bottom: 28px;
   }
@@ -5466,6 +5982,63 @@ h1 span {
     padding: 64px 0 82px;
   }
 
+  .outcomes-roadmap {
+    padding: 48px 0 64px;
+  }
+
+  .outcomes-header h2 {
+    font-size: clamp(34px, 10.5vw, 46px);
+  }
+
+  .outcomes-header p:not(.eyebrow) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .outcome-path {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .outcome-path-index {
+    margin-bottom: 18px;
+  }
+
+  .outcome-path h3 {
+    font-size: 25px;
+    padding: 10px 11px 11px;
+  }
+
+  .outcome-path p {
+    font-size: 14px;
+  }
+
+  .outcome-path-labels {
+    gap: 6px;
+    padding-top: 16px;
+  }
+
+  .outcome-path-labels span {
+    min-height: 24px;
+    font-size: 9px;
+  }
+
+  .roadmap-modules {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap-modules::before {
+    left: 26px;
+  }
+
+  .roadmap-modules li {
+    min-height: 50px;
+  }
+
+  .roadmap-panel-head {
+    font-size: 9px;
+  }
+
   .participant-proof {
     padding: 28px 0 66px;
   }
@@ -5616,6 +6189,11 @@ h1 span {
     opacity: 0.35;
   }
 
+  .proof-metric-stack::after {
+    animation: none !important;
+    opacity: 0.3;
+  }
+
   .proof-card-route-pulse {
     animation: none !important;
     opacity: 0.45;
@@ -5624,4 +6202,10 @@ h1 span {
   .proof-signal i {
     animation: none !important;
   }
+
+  .roadmap-panel::before {
+    animation: none !important;
+    opacity: 0.32;
+  }
+
 }
