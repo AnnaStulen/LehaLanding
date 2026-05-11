@@ -4775,6 +4775,18 @@ h1 span {
   line-height: 1;
 }
 
+.pricing-old-price {
+  display: inline-flex;
+  width: fit-content;
+  padding-top: 8px;
+  color: rgba(167, 180, 200, 0.72);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
 .pricing-card-intro {
   min-height: 74px;
   margin: 0 0 22px;
