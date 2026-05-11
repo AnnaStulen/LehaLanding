@@ -1348,13 +1348,6 @@ h1 span {
   animation-delay: 9s;
 }
 
-.practice-module-particle-07 {
-  --sy: 180px;
-  --my: 1077px;
-  --ey: 1077px;
-  animation-delay: 10.8s;
-}
-
 .practice-story-index {
   position: sticky;
   top: 96px;
@@ -1502,11 +1495,6 @@ h1 span {
   animation-delay: 6.75s;
 }
 
-.practice-story-chapter:nth-child(7) .practice-chapter-dot::before,
-.practice-story-chapter:nth-child(7) .practice-chapter-dot::after {
-  animation-delay: 8.1s;
-}
-
 .practice-chapter-panel {
   padding: 26px 28px 28px;
   background:
@@ -1538,10 +1526,6 @@ h1 span {
 
 .practice-story-chapter:nth-child(6) .practice-chapter-panel {
   animation-delay: 9s;
-}
-
-.practice-story-chapter:nth-child(7) .practice-chapter-panel {
-  animation-delay: 10.8s;
 }
 
 .practice-chapter-panel:hover {
