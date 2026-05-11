@@ -96,7 +96,7 @@ Before a screenshot block is considered done, verify computed CSS:
 
 ## Block 1
 
-Status: prepared.
+Status: completed.
 
 Name: Hero / Ð¿ÐµÑ€Ð²Ñ‹Ð¹ ÑÐºÑ€Ð°Ð½.
 
@@ -152,7 +152,7 @@ What is planned:
 
 ## Block 2
 
-Status: prepared.
+Status: completed.
 
 Name: Что именно будем делать на курсе.
 
@@ -368,3 +368,123 @@ Result:
   - `assets/block-05-risk-drawdown.jpg`
   - `assets/block-05-risk-blind-zones.jpg`
 - Next block: Block 6, Практико-ориентированная модель обучения.
+
+## Block 6
+
+Status: completed.
+
+Name: Практико-ориентированная модель обучения.
+
+Implemented section:
+
+`practice-workflow`
+
+Purpose:
+
+Show how the course moves from theory into live-market work: real data, team desk, trade review, risk planning, exposure control, discipline, and quant infrastructure.
+
+Result:
+
+- Block 6 is completed in the landing workflow.
+- Possible improvement: add left-side vertical motion/ambient data animation in the empty area around the 01-07 navigation and timeline.
+- Next content block still needed: Block 7, Результаты участников и доказательства.
+
+## Block 7
+
+Status: pending.
+
+Name: Результаты участников и доказательства.
+
+Main asset candidate:
+
+`пнлучастников.png`
+
+Purpose:
+
+Show proof/social proof carefully without promising guaranteed income. The block should explain participant dynamics, PnL discipline, drawdown/context, and the condition that results depend on risk parameters and execution discipline.
+
+Important:
+
+- Do not promise guaranteed доход.
+- Prefer anonymized/reworked proof cards instead of raw unreadable screenshot.
+- Keep proof materials readable and do not globally darken them.
+
+## Block 8
+
+Status: pending.
+
+Name: Два пути после курса.
+
+Purpose:
+
+Show the two outcomes after the course: independent trader with software/inventory workflow, or path toward algo-prop / research desk / capital management.
+
+## Block 9
+
+Status: pending.
+
+Name: Программа / модули курса.
+
+Main asset candidate:
+
+`название уроков.jpg`
+
+Purpose:
+
+Turn the rough module table into a clean course roadmap.
+
+## Block 10
+
+Status: pending.
+
+Name: Средний CTA.
+
+Purpose:
+
+Add a conversion point after enough methodology/proof has been shown.
+
+## Block 11
+
+Status: completed.
+
+Name: Тарифы и покупка.
+
+Implemented section:
+
+`pricing-section`
+
+Purpose:
+
+Show the three paid formats: `$1000`, `$4700`, `$10,000`, with the main/recommended tier highlighted.
+
+Result:
+
+- Block 11 is completed in the landing workflow.
+
+## Block 12
+
+Status: removed.
+
+Name: FAQ.
+
+Decision:
+
+Block 12 is not needed and should be removed from the working plan. Do not prepare or implement a separate FAQ block unless the user explicitly brings it back.
+
+## Block 13
+
+Status: completed.
+
+Name: Footer.
+
+Implemented section:
+
+`site-footer`
+
+Purpose:
+
+Finish the landing with Telegram contact, navigation/documents area, risk disclaimer, and copyright/legal closing.
+
+Result:
+
+- Block 13 is completed in the landing workflow.
