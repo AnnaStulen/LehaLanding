@@ -4519,7 +4519,7 @@ h1 span {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.18fr) minmax(0, 0.92fr);
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.92fr) minmax(0, 0.92fr);
   gap: 18px;
   align-items: center;
 }
@@ -4586,6 +4586,12 @@ h1 span {
     0 0 0 1px rgba(0, 183, 255, 0.16) inset,
     0 34px 110px rgba(0, 0, 0, 0.72),
     0 0 84px rgba(0, 93, 255, 0.34);
+  transform: translateY(-14px);
+}
+
+.pricing-card-featured:hover,
+.pricing-card-featured:focus-within {
+  transform: translateY(-18px);
 }
 
 .pricing-badge,
@@ -4630,22 +4636,42 @@ h1 span {
 
 .pricing-card strong {
   display: block;
-  color: #fff;
+  color: rgba(214, 246, 255, 0.92);
   font-family: "JetBrains Mono", monospace;
-  font-size: clamp(34px, 4vw, 56px);
+  font-size: clamp(24px, 2.4vw, 36px);
   line-height: 1;
 }
 
 .pricing-old-price {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
   width: fit-content;
-  padding-top: 8px;
-  color: rgba(167, 180, 200, 0.72);
+  margin: 0 0 12px;
+  color: rgba(167, 180, 200, 0.78);
   font-family: "JetBrains Mono", monospace;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.35;
   text-transform: uppercase;
+}
+
+.pricing-old-price s {
+  color: #fff;
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 1;
+  text-decoration-color: rgba(0, 183, 255, 0.92);
+  text-decoration-thickness: 3px;
+  text-shadow: 0 0 30px rgba(0, 119, 255, 0.28);
+}
+
+.pricing-card-featured .pricing-old-price s {
+  font-size: clamp(42px, 5vw, 72px);
+}
+
+.pricing-card-featured strong {
+  font-size: clamp(26px, 2.8vw, 40px);
 }
 
 .pricing-card-intro {
@@ -5344,6 +5370,7 @@ h1 span {
   .pricing-card,
   .pricing-card-featured {
     min-height: auto;
+    transform: none;
   }
 
   .footer-inner {
