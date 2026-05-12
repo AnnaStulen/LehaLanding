@@ -4639,8 +4639,22 @@ h1 span {
 }
 
 .pricing-card .pricing-price-highlight {
-  color: #8fd7a2;
-  text-shadow: 0 0 22px rgba(143, 215, 162, 0.18);
+  position: relative;
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 13px 9px;
+  color: #d8fff0;
+  background:
+    linear-gradient(180deg, rgba(93, 255, 182, 0.105), rgba(0, 183, 255, 0.055)),
+    rgba(1, 12, 10, 0.34);
+  border: 1px solid rgba(0, 196, 184, 0.22);
+  box-shadow:
+    0 0 0 1px rgba(216, 255, 240, 0.025) inset,
+    0 0 28px rgba(93, 255, 182, 0.095),
+    0 0 44px rgba(0, 183, 255, 0.055);
+  text-shadow:
+    0 0 16px rgba(216, 255, 240, 0.16),
+    0 0 28px rgba(93, 255, 182, 0.12);
 }
 
 .pricing-old-price {
