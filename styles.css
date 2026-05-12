@@ -4658,16 +4658,16 @@ h1 span {
 }
 
 .pricing-old-price s {
-  color: #fff;
-  font-size: clamp(34px, 4vw, 58px);
+  color: #2f9dff;
+  font-size: clamp(30px, 3.3vw, 48px);
   line-height: 1;
-  text-decoration-color: rgba(0, 183, 255, 0.92);
-  text-decoration-thickness: 3px;
-  text-shadow: 0 0 30px rgba(0, 119, 255, 0.28);
+  text-decoration-color: rgba(244, 247, 251, 0.92);
+  text-decoration-thickness: 2px;
+  text-shadow: 0 0 24px rgba(0, 119, 255, 0.34);
 }
 
 .pricing-card-featured .pricing-old-price s {
-  font-size: clamp(42px, 5vw, 72px);
+  font-size: clamp(36px, 4.2vw, 60px);
 }
 
 .pricing-card-featured strong {
@@ -5987,7 +5987,7 @@ h1 span {
   }
 
   .pricing-card strong {
-    font-size: clamp(32px, 10vw, 46px);
+    font-size: clamp(28px, 8.5vw, 38px);
   }
 
   .pricing-card-intro {
