@@ -1331,35 +1331,35 @@ h1 span {
   --sy: 50px;
   --my: 197px;
   --ey: 197px;
-  animation-delay: 2.2s;
+  animation-delay: 2.6s;
 }
 
 .practice-module-particle-03 {
   --sy: 76px;
   --my: 373px;
   --ey: 373px;
-  animation-delay: 4.4s;
+  animation-delay: 5.2s;
 }
 
 .practice-module-particle-04 {
   --sy: 102px;
   --my: 549px;
   --ey: 549px;
-  animation-delay: 6.6s;
+  animation-delay: 7.8s;
 }
 
 .practice-module-particle-05 {
   --sy: 128px;
   --my: 725px;
   --ey: 725px;
-  animation-delay: 8.8s;
+  animation-delay: 10.4s;
 }
 
 .practice-module-particle-06 {
   --sy: 154px;
   --my: 901px;
   --ey: 901px;
-  animation-delay: 11s;
+  animation-delay: 13s;
 }
 
 .practice-story-index {
@@ -1486,27 +1486,27 @@ h1 span {
 
 .practice-story-chapter:nth-child(2) .practice-chapter-dot::before,
 .practice-story-chapter:nth-child(2) .practice-chapter-dot::after {
-  animation-delay: 2.2s;
+  animation-delay: 2.6s;
 }
 
 .practice-story-chapter:nth-child(3) .practice-chapter-dot::before,
 .practice-story-chapter:nth-child(3) .practice-chapter-dot::after {
-  animation-delay: 4.4s;
+  animation-delay: 5.2s;
 }
 
 .practice-story-chapter:nth-child(4) .practice-chapter-dot::before,
 .practice-story-chapter:nth-child(4) .practice-chapter-dot::after {
-  animation-delay: 6.6s;
+  animation-delay: 7.8s;
 }
 
 .practice-story-chapter:nth-child(5) .practice-chapter-dot::before,
 .practice-story-chapter:nth-child(5) .practice-chapter-dot::after {
-  animation-delay: 8.8s;
+  animation-delay: 10.4s;
 }
 
 .practice-story-chapter:nth-child(6) .practice-chapter-dot::before,
 .practice-story-chapter:nth-child(6) .practice-chapter-dot::after {
-  animation-delay: 11s;
+  animation-delay: 13s;
 }
 
 .practice-chapter-panel {
@@ -1523,23 +1523,23 @@ h1 span {
 }
 
 .practice-story-chapter:nth-child(2) .practice-chapter-panel {
-  animation-delay: 2.2s;
+  animation-delay: 2.6s;
 }
 
 .practice-story-chapter:nth-child(3) .practice-chapter-panel {
-  animation-delay: 4.4s;
+  animation-delay: 5.2s;
 }
 
 .practice-story-chapter:nth-child(4) .practice-chapter-panel {
-  animation-delay: 6.6s;
+  animation-delay: 7.8s;
 }
 
 .practice-story-chapter:nth-child(5) .practice-chapter-panel {
-  animation-delay: 8.8s;
+  animation-delay: 10.4s;
 }
 
 .practice-story-chapter:nth-child(6) .practice-chapter-panel {
-  animation-delay: 11s;
+  animation-delay: 13s;
 }
 
 .practice-chapter-panel:hover {
@@ -1615,14 +1615,14 @@ h1 span {
 
 @keyframes practiceDotPulse {
   0%,
-  9%,
-  24%,
+  7%,
+  13.5%,
   100% {
     opacity: 0;
     transform: scale(0.84);
   }
 
-  13% {
+  9.5% {
     opacity: 0.64;
     transform: scale(1.12);
   }
@@ -1630,14 +1630,14 @@ h1 span {
 
 @keyframes practiceDotGlow {
   0%,
-  9%,
-  25%,
+  7%,
+  13.5%,
   100% {
     opacity: 0;
     transform: scale(0.7);
   }
 
-  13% {
+  9.5% {
     opacity: 0.62;
     transform: scale(1.04);
   }
@@ -1645,31 +1645,31 @@ h1 span {
 
 @keyframes practiceModuleParticleRoute {
   0%,
-  2% {
+  1.5% {
     opacity: 0;
     filter: drop-shadow(0 0 0 rgba(0, 183, 255, 0));
     transform: translate3d(var(--sx), var(--sy), 0) scale(0.72);
   }
 
-  4% {
+  3% {
     opacity: 0.72;
     filter: drop-shadow(0 0 10px rgba(0, 183, 255, 0.18));
     transform: translate3d(var(--sx), var(--sy), 0) scale(1);
   }
 
-  9% {
+  7.5% {
     opacity: 0.86;
     filter: drop-shadow(0 0 16px rgba(0, 183, 255, 0.28));
     transform: translate3d(var(--mx), var(--my), 0) scale(0.86);
   }
 
-  14% {
+  11% {
     opacity: 0.58;
     filter: drop-shadow(0 0 12px rgba(0, 119, 255, 0.2));
     transform: translate3d(var(--ex), var(--ey), 0) scale(0.76);
   }
 
-  18%,
+  13.2%,
   100% {
     opacity: 0;
     filter: drop-shadow(0 0 0 rgba(0, 183, 255, 0));
@@ -1679,15 +1679,15 @@ h1 span {
 
 @keyframes practiceModulePanelReceive {
   0%,
-  10%,
-  22%,
+  8%,
+  14.5%,
   100% {
     border-color: rgba(0, 183, 255, 0.18);
     box-shadow: none;
   }
 
-  14%,
-  18% {
+  10%,
+  12.5% {
     border-color: rgba(0, 183, 255, 0.34);
     box-shadow:
       inset 1px 0 0 rgba(0, 183, 255, 0.16),

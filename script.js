@@ -57,3 +57,38 @@ zoneTriggers.forEach((trigger) => {
   trigger.addEventListener("mouseenter", activateZone);
   trigger.addEventListener("mouseleave", clearZone);
 });
+
+const practiceLayout = document.querySelector(".practice-story-layout");
+const practiceIndexItems = document.querySelectorAll(".practice-story-index span");
+const practiceParticles = document.querySelectorAll(".practice-module-particle");
+const practiceDots = document.querySelectorAll(".practice-chapter-dot");
+
+function syncPracticeParticleRoutes() {
+  if (!practiceLayout || !practiceParticles.length || !practiceDots.length) return;
+
+  const layoutRect = practiceLayout.getBoundingClientRect();
+
+  practiceParticles.forEach((particle, index) => {
+    const indexItem = practiceIndexItems[index];
+    const dot = practiceDots[index];
+    if (!indexItem || !dot) return;
+
+    const indexRect = indexItem.getBoundingClientRect();
+    const dotRect = dot.getBoundingClientRect();
+    const startX = indexRect.right - layoutRect.left - 46;
+    const startY = indexRect.top - layoutRect.top + indexRect.height / 2 - 7;
+    const dotCenterX = dotRect.left - layoutRect.left + dotRect.width / 2;
+    const dotCenterY = dotRect.top - layoutRect.top + dotRect.height / 2 - 7;
+
+    particle.style.setProperty("--sx", `${Math.round(startX)}px`);
+    particle.style.setProperty("--sy", `${Math.round(startY)}px`);
+    particle.style.setProperty("--mx", `${Math.round(dotCenterX - 1)}px`);
+    particle.style.setProperty("--my", `${Math.round(dotCenterY)}px`);
+    particle.style.setProperty("--ex", `${Math.round(dotCenterX + 5)}px`);
+    particle.style.setProperty("--ey", `${Math.round(dotCenterY)}px`);
+  });
+}
+
+syncPracticeParticleRoutes();
+window.addEventListener("load", syncPracticeParticleRoutes);
+window.addEventListener("resize", syncPracticeParticleRoutes);
