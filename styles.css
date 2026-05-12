@@ -1301,7 +1301,7 @@ h1 span {
   opacity: 0;
   transform: translate3d(var(--sx), var(--sy), 0) scale(0.72);
   will-change: transform, opacity, filter;
-  animation: practiceModuleParticleRoute 12.6s cubic-bezier(0.43, 0, 0.2, 1) infinite;
+  animation: practiceModuleParticleRoute 15.6s cubic-bezier(0.43, 0, 0.2, 1) infinite;
 }
 
 .practice-module-particle::before {
@@ -1331,35 +1331,35 @@ h1 span {
   --sy: 50px;
   --my: 197px;
   --ey: 197px;
-  animation-delay: 1.8s;
+  animation-delay: 2.2s;
 }
 
 .practice-module-particle-03 {
   --sy: 76px;
   --my: 373px;
   --ey: 373px;
-  animation-delay: 3.6s;
+  animation-delay: 4.4s;
 }
 
 .practice-module-particle-04 {
   --sy: 102px;
   --my: 549px;
   --ey: 549px;
-  animation-delay: 5.4s;
+  animation-delay: 6.6s;
 }
 
 .practice-module-particle-05 {
   --sy: 128px;
   --my: 725px;
   --ey: 725px;
-  animation-delay: 7.2s;
+  animation-delay: 8.8s;
 }
 
 .practice-module-particle-06 {
   --sy: 154px;
   --my: 901px;
   --ey: 901px;
-  animation-delay: 9s;
+  animation-delay: 11s;
 }
 
 .practice-story-index {
@@ -1473,7 +1473,7 @@ h1 span {
 
 .practice-chapter-dot::before {
   box-shadow: 0 0 24px rgba(0, 183, 255, 0.2);
-  animation: practiceDotPulse 10s cubic-bezier(0.43, 0, 0.2, 1) infinite;
+  animation: practiceDotPulse 15.6s cubic-bezier(0.43, 0, 0.2, 1) infinite;
 }
 
 .practice-chapter-dot::after {
@@ -1481,32 +1481,32 @@ h1 span {
   background: rgba(0, 183, 255, 0.18);
   border: 0;
   filter: blur(8px);
-  animation: practiceDotGlow 10s cubic-bezier(0.43, 0, 0.2, 1) infinite;
+  animation: practiceDotGlow 15.6s cubic-bezier(0.43, 0, 0.2, 1) infinite;
 }
 
 .practice-story-chapter:nth-child(2) .practice-chapter-dot::before,
 .practice-story-chapter:nth-child(2) .practice-chapter-dot::after {
-  animation-delay: 1.35s;
+  animation-delay: 2.2s;
 }
 
 .practice-story-chapter:nth-child(3) .practice-chapter-dot::before,
 .practice-story-chapter:nth-child(3) .practice-chapter-dot::after {
-  animation-delay: 2.7s;
+  animation-delay: 4.4s;
 }
 
 .practice-story-chapter:nth-child(4) .practice-chapter-dot::before,
 .practice-story-chapter:nth-child(4) .practice-chapter-dot::after {
-  animation-delay: 4.05s;
+  animation-delay: 6.6s;
 }
 
 .practice-story-chapter:nth-child(5) .practice-chapter-dot::before,
 .practice-story-chapter:nth-child(5) .practice-chapter-dot::after {
-  animation-delay: 5.4s;
+  animation-delay: 8.8s;
 }
 
 .practice-story-chapter:nth-child(6) .practice-chapter-dot::before,
 .practice-story-chapter:nth-child(6) .practice-chapter-dot::after {
-  animation-delay: 6.75s;
+  animation-delay: 11s;
 }
 
 .practice-chapter-panel {
@@ -1515,7 +1515,7 @@ h1 span {
     linear-gradient(180deg, rgba(5, 10, 18, 0.82), rgba(1, 4, 9, 0.62)),
     linear-gradient(90deg, rgba(0, 183, 255, 0.1), transparent);
   border: 1px solid rgba(0, 183, 255, 0.18);
-  animation: practiceModulePanelReceive 12.6s cubic-bezier(0.43, 0, 0.2, 1) infinite;
+  animation: practiceModulePanelReceive 15.6s cubic-bezier(0.43, 0, 0.2, 1) infinite;
   transition:
     transform 240ms ease,
     border-color 240ms ease,
@@ -1523,23 +1523,23 @@ h1 span {
 }
 
 .practice-story-chapter:nth-child(2) .practice-chapter-panel {
-  animation-delay: 1.8s;
+  animation-delay: 2.2s;
 }
 
 .practice-story-chapter:nth-child(3) .practice-chapter-panel {
-  animation-delay: 3.6s;
+  animation-delay: 4.4s;
 }
 
 .practice-story-chapter:nth-child(4) .practice-chapter-panel {
-  animation-delay: 5.4s;
+  animation-delay: 6.6s;
 }
 
 .practice-story-chapter:nth-child(5) .practice-chapter-panel {
-  animation-delay: 7.2s;
+  animation-delay: 8.8s;
 }
 
 .practice-story-chapter:nth-child(6) .practice-chapter-panel {
-  animation-delay: 9s;
+  animation-delay: 11s;
 }
 
 .practice-chapter-panel:hover {
@@ -3408,53 +3408,6 @@ h1 span {
   line-height: 1;
 }
 
-.method-notes {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 16px;
-  border-top: 1px solid rgba(0, 183, 255, 0.18);
-  border-left: 1px solid rgba(0, 183, 255, 0.18);
-}
-
-.method-notes p {
-  position: relative;
-  min-height: 118px;
-  margin: 0;
-  padding: 17px;
-  color: rgba(244, 247, 251, 0.82);
-  font-size: 14px;
-  line-height: 1.5;
-  background: linear-gradient(180deg, rgba(5, 10, 18, 0.72), rgba(1, 4, 9, 0.7));
-  border-right: 1px solid rgba(0, 183, 255, 0.18);
-  border-bottom: 1px solid rgba(0, 183, 255, 0.18);
-  transition:
-    transform 280ms ease,
-    border-color 280ms ease,
-    box-shadow 280ms ease,
-    background 280ms ease;
-}
-
-.method-notes p:hover {
-  z-index: 1;
-  background: linear-gradient(180deg, rgba(6, 18, 34, 0.9), rgba(1, 8, 17, 0.78));
-  border-color: rgba(0, 183, 255, 0.42);
-  box-shadow:
-    0 0 0 1px rgba(0, 183, 255, 0.08) inset,
-    0 14px 34px rgba(0, 0, 0, 0.36),
-    0 0 34px rgba(0, 93, 255, 0.12);
-  transform: translateY(-2px);
-}
-
-.method-notes span {
-  display: block;
-  margin-bottom: 12px;
-  color: var(--cyan);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 @keyframes methodGridDrift {
   0%,
   100% {
@@ -4685,6 +4638,11 @@ h1 span {
   line-height: 1;
 }
 
+.pricing-card .pricing-price-highlight {
+  color: #8fd7a2;
+  text-shadow: 0 0 22px rgba(143, 215, 162, 0.18);
+}
+
 .pricing-old-price {
   display: flex;
   flex-wrap: wrap;
@@ -5452,10 +5410,6 @@ h1 span {
     min-height: auto;
   }
 
-  .method-notes {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .research-console {
     order: 1;
   }
@@ -5785,8 +5739,7 @@ h1 span {
     bottom: 14px;
   }
 
-  .trade-review-dashboard,
-  .method-notes {
+  .trade-review-dashboard {
     grid-template-columns: 1fr;
   }
 
