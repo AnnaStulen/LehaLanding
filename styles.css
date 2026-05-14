@@ -4497,10 +4497,10 @@ h1 span {
 }
 
 .pricing-header h2 {
-  max-width: 900px;
+  max-width: 760px;
   margin: 0;
-  font-size: clamp(44px, 6.6vw, 92px);
-  line-height: 0.96;
+  font-size: clamp(34px, 4.8vw, 66px);
+  line-height: 1;
   letter-spacing: 0;
 }
 
@@ -4513,11 +4513,18 @@ h1 span {
   line-height: 1.55;
 }
 
+.pricing-offer-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(230px, 0.3fr);
+  gap: clamp(16px, 2vw, 28px);
+  align-items: stretch;
+}
+
 .pricing-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.92fr) minmax(0, 0.92fr);
-  gap: 18px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1.26fr) minmax(0, 0.9fr) minmax(0, 0.9fr);
+  gap: 16px;
+  align-items: stretch;
 }
 
 .pricing-card {
@@ -4526,10 +4533,15 @@ h1 span {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  min-height: 650px;
-  padding: clamp(22px, 2.4vw, 34px);
-  background: linear-gradient(180deg, rgba(5, 10, 18, 0.82), rgba(1, 4, 9, 0.72));
-  border: 1px solid rgba(0, 183, 255, 0.2);
+  min-height: 620px;
+  padding: clamp(20px, 1.8vw, 28px);
+  background:
+    linear-gradient(90deg, rgba(0, 183, 255, 0.16) 0 1px, transparent 1px calc(100% - 1px), rgba(0, 183, 255, 0.08) calc(100% - 1px)),
+    linear-gradient(180deg, rgba(0, 183, 255, 0.14) 0 1px, transparent 1px calc(100% - 1px), rgba(0, 93, 255, 0.1) calc(100% - 1px)),
+    radial-gradient(circle at 50% 0%, rgba(0, 93, 255, 0.12), transparent 42%),
+    linear-gradient(180deg, rgba(5, 10, 18, 0.88), rgba(1, 4, 9, 0.8));
+  border: 1px solid rgba(0, 183, 255, 0.26);
+  border-radius: 0;
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.025) inset,
     0 24px 74px rgba(0, 0, 0, 0.56),
@@ -4548,10 +4560,11 @@ h1 span {
   pointer-events: none;
   content: "";
   background:
-    linear-gradient(90deg, rgba(0, 183, 255, 0.13) 1px, transparent 1px),
-    linear-gradient(rgba(0, 183, 255, 0.08) 1px, transparent 1px);
-  background-size: 36px 36px;
-  opacity: 0.1;
+    linear-gradient(90deg, rgba(0, 183, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(rgba(0, 183, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(135deg, transparent 0 46%, rgba(0, 183, 255, 0.24) 46% 46.4%, transparent 46.4%);
+  background-size: 34px 34px, 34px 34px, 100% 100%;
+  opacity: 0.12;
   mask-image: linear-gradient(180deg, #000, transparent 72%);
 }
 
@@ -4572,8 +4585,8 @@ h1 span {
 }
 
 .pricing-card-featured {
-  min-height: 760px;
-  padding: clamp(26px, 3vw, 42px);
+  min-height: 650px;
+  padding: clamp(22px, 2.2vw, 32px);
   background:
     radial-gradient(circle at 50% 0%, rgba(0, 183, 255, 0.18), transparent 42%),
     linear-gradient(180deg, rgba(6, 18, 34, 0.94), rgba(1, 5, 12, 0.86));
@@ -4582,12 +4595,12 @@ h1 span {
     0 0 0 1px rgba(0, 183, 255, 0.16) inset,
     0 34px 110px rgba(0, 0, 0, 0.72),
     0 0 84px rgba(0, 93, 255, 0.34);
-  transform: translateY(-14px);
+  transform: translateY(-8px);
 }
 
 .pricing-card-featured:hover,
 .pricing-card-featured:focus-within {
-  transform: translateY(-18px);
+  transform: translateY(-12px);
 }
 
 .pricing-badge,
@@ -4620,14 +4633,14 @@ h1 span {
 }
 
 .pricing-card h3 {
-  margin: 0 0 16px;
-  font-size: clamp(32px, 3vw, 48px);
+  margin: 0 0 12px;
+  font-size: clamp(28px, 2.4vw, 40px);
   line-height: 0.98;
   letter-spacing: 0;
 }
 
 .pricing-card-featured h3 {
-  font-size: clamp(40px, 4vw, 64px);
+  font-size: clamp(32px, 2.8vw, 46px);
 }
 
 .pricing-card strong {
@@ -4639,22 +4652,16 @@ h1 span {
 }
 
 .pricing-card .pricing-price-highlight {
-  position: relative;
-  display: inline-flex;
+  display: block;
   width: fit-content;
-  padding: 8px 13px 9px;
-  color: #d8fff0;
-  background:
-    linear-gradient(180deg, rgba(93, 255, 182, 0.105), rgba(0, 183, 255, 0.055)),
-    rgba(1, 12, 10, 0.34);
-  border: 1px solid rgba(0, 196, 184, 0.22);
-  box-shadow:
-    0 0 0 1px rgba(216, 255, 240, 0.025) inset,
-    0 0 28px rgba(93, 255, 182, 0.095),
-    0 0 44px rgba(0, 183, 255, 0.055);
+  padding: 0;
+  color: #c9ffe0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
   text-shadow:
-    0 0 16px rgba(216, 255, 240, 0.16),
-    0 0 28px rgba(93, 255, 182, 0.12);
+    0 0 14px rgba(201, 255, 224, 0.28),
+    0 0 30px rgba(48, 214, 118, 0.24);
 }
 
 .pricing-old-price {
@@ -4689,13 +4696,79 @@ h1 span {
   font-size: clamp(26px, 2.8vw, 40px);
 }
 
+.pricing-card-subtitle {
+  min-height: 46px;
+  margin: 0 0 18px;
+  color: rgba(167, 210, 232, 0.86);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.pricing-module-notice {
+  margin: 0 0 18px;
+  padding: 12px 13px;
+  color: rgba(225, 248, 255, 0.94);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.45;
+  text-transform: uppercase;
+  background: rgba(0, 93, 255, 0.13);
+  border: 1px solid rgba(0, 183, 255, 0.32);
+  box-shadow:
+    0 0 0 1px rgba(244, 247, 251, 0.025) inset,
+    0 0 28px rgba(0, 93, 255, 0.12);
+}
+
 .pricing-card-intro {
-  min-height: 74px;
-  margin: 0 0 22px;
+  margin: 0 0 24px;
   color: rgba(244, 247, 251, 0.88);
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.48;
+  font-size: clamp(13px, 0.95vw, 15px);
+  font-weight: 650;
+  line-height: 1.62;
+}
+
+.pricing-feature-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0 0 26px;
+  list-style: none;
+}
+
+.pricing-feature-list li {
+  position: relative;
+  padding: 13px 12px 13px 16px;
+  color: rgba(244, 247, 251, 0.82);
+  font-size: clamp(13px, 0.9vw, 14px);
+  font-weight: 650;
+  line-height: 1.46;
+  background: linear-gradient(90deg, rgba(0, 183, 255, 0.08), rgba(0, 93, 255, 0.035), transparent);
+  border-left: 1px solid rgba(0, 183, 255, 0.44);
+}
+
+.pricing-feature-list li::before {
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 1px;
+  height: 28px;
+  content: "";
+  background: rgba(201, 255, 224, 0.78);
+  box-shadow: 0 0 18px rgba(48, 214, 118, 0.34);
+}
+
+.pricing-feature-list span {
+  display: block;
+  margin-bottom: 5px;
+  color: rgba(108, 216, 255, 0.92);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .pricing-card ul {
@@ -4734,6 +4807,23 @@ h1 span {
   box-shadow: none;
 }
 
+.pricing-card .pricing-feature-list li {
+  padding: 13px 12px 13px 16px;
+  color: rgba(244, 247, 251, 0.82);
+  font-size: clamp(13px, 0.9vw, 14px);
+  font-weight: 650;
+  line-height: 1.46;
+}
+
+.pricing-card .pricing-feature-list li::before {
+  left: -1px;
+  top: 0;
+  width: 1px;
+  height: 28px;
+  background: rgba(201, 255, 224, 0.78);
+  box-shadow: 0 0 18px rgba(48, 214, 118, 0.34);
+}
+
 .pricing-card-cta {
   display: inline-flex;
   align-items: center;
@@ -4747,6 +4837,8 @@ h1 span {
   text-align: center;
   background: rgba(0, 8, 18, 0.72);
   border: 1px solid rgba(0, 183, 255, 0.34);
+  border-radius: 0;
+  text-transform: uppercase;
   transition:
     transform 220ms ease,
     border-color 220ms ease,
@@ -4771,6 +4863,153 @@ h1 span {
     0 18px 48px rgba(0, 93, 255, 0.34);
 }
 
+.pricing-bundle-offer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: visible;
+  min-height: 690px;
+  padding: clamp(24px, 2.6vw, 40px) clamp(18px, 2vw, 26px) clamp(24px, 2.6vw, 40px) clamp(28px, 3vw, 48px);
+  background:
+    radial-gradient(circle at 0% 40%, rgba(0, 183, 255, 0.16), transparent 46%),
+    linear-gradient(90deg, rgba(0, 93, 255, 0.08), transparent 72%);
+  border: 0;
+  border-radius: 0;
+  box-shadow:
+    -22px 0 68px rgba(0, 93, 255, 0.12),
+    0 0 86px rgba(0, 183, 255, 0.07);
+}
+
+.pricing-bundle-offer::before {
+  position: absolute;
+  left: 16px;
+  top: 8%;
+  bottom: 8%;
+  width: 2px;
+  content: "";
+  background: linear-gradient(180deg, transparent, rgba(0, 183, 255, 0.74), rgba(0, 93, 255, 0.42), transparent);
+  box-shadow: 0 0 26px rgba(0, 183, 255, 0.38);
+}
+
+.pricing-bundle-offer::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(0, 183, 255, 0.12) 1px, transparent 1px),
+    radial-gradient(circle at 12% 50%, rgba(0, 119, 255, 0.18), transparent 52%);
+  background-size: 30px 30px, auto;
+  opacity: 0.16;
+  mask-image: linear-gradient(90deg, #000, transparent 78%);
+}
+
+.pricing-bundle-offer > * {
+  position: relative;
+  z-index: 1;
+}
+
+.pricing-bundle-kicker {
+  color: var(--cyan);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.pricing-bundle-title {
+  display: block;
+  margin: 18px 0 14px;
+  color: #4facff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(52px, 5.4vw, 82px);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-shadow: 0 0 38px rgba(0, 119, 255, 0.34);
+}
+
+.pricing-bundle-offer p {
+  max-width: 290px;
+  margin: 0;
+  color: rgba(244, 247, 251, 0.84);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.pricing-bundle-price {
+  display: grid;
+  gap: 8px;
+  margin: 36px 0 22px;
+  font-family: "JetBrains Mono", monospace;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.pricing-bundle-price span {
+  color: rgba(167, 206, 230, 0.78);
+  font-size: clamp(28px, 2.9vw, 42px);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.pricing-bundle-price s {
+  text-decoration-color: rgba(229, 247, 255, 0.86);
+  text-decoration-thickness: 3px;
+  text-shadow: 0 0 28px rgba(0, 119, 255, 0.2);
+}
+
+.pricing-bundle-price strong {
+  color: #f4fbff;
+  font-size: clamp(38px, 3.9vw, 58px);
+  font-weight: 900;
+  white-space: nowrap;
+  text-shadow:
+    0 0 20px rgba(244, 251, 255, 0.18),
+    0 0 38px rgba(0, 183, 255, 0.24);
+}
+
+.pricing-bundle-note {
+  color: rgba(244, 247, 251, 0.68) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+.pricing-bundle-cta {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 26px;
+  padding: 0 18px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #0b8cff 0%, #006ff2 45%, #004fc7 100%);
+  border: 1px solid rgba(0, 183, 255, 0.78);
+  border-radius: 0;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    0 18px 48px rgba(0, 93, 255, 0.28);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.pricing-bundle-cta:hover,
+.pricing-bundle-cta:focus-visible {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12) inset,
+    0 22px 58px rgba(0, 93, 255, 0.34);
+  transform: translateY(-2px);
+}
+
 .pricing-disclaimer {
   max-width: 980px;
   margin: 28px auto 0;
@@ -4779,6 +5018,7 @@ h1 span {
   line-height: 1.62;
   text-align: center;
 }
+
 
 .site-footer {
   position: relative;
@@ -5378,6 +5618,11 @@ h1 span {
     margin-bottom: 0;
   }
 
+  .pricing-offer-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .pricing-grid {
     grid-template-columns: 1fr;
   }
@@ -5386,6 +5631,30 @@ h1 span {
   .pricing-card-featured {
     min-height: auto;
     transform: none;
+  }
+
+  .pricing-bundle-offer {
+    min-height: auto;
+    padding: 30px 20px 28px;
+  }
+
+  .pricing-bundle-offer::before {
+    left: 20px;
+    top: 0;
+    right: 20px;
+    bottom: auto;
+    width: auto;
+    height: 1px;
+  }
+
+  .pricing-bundle-offer::after {
+    inset: 0;
+    width: auto;
+    height: auto;
+  }
+
+  .pricing-bundle-offer p {
+    max-width: 620px;
   }
 
   .footer-inner {
@@ -5984,7 +6253,7 @@ h1 span {
   }
 
   .pricing-header h2 {
-    font-size: clamp(38px, 11vw, 52px);
+    font-size: clamp(32px, 9.5vw, 44px);
   }
 
   .pricing-header p {
@@ -6003,6 +6272,22 @@ h1 span {
 
   .pricing-card strong {
     font-size: clamp(28px, 8.5vw, 38px);
+  }
+
+  .pricing-bundle-title {
+    font-size: clamp(58px, 17vw, 86px);
+  }
+
+  .pricing-bundle-price {
+    margin: 28px 0 18px;
+  }
+
+  .pricing-bundle-price span {
+    font-size: clamp(30px, 9vw, 42px);
+  }
+
+  .pricing-bundle-price strong {
+    font-size: clamp(42px, 12vw, 58px);
   }
 
   .pricing-card-intro {
