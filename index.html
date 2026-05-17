@@ -1160,11 +1160,11 @@
 
         <div class="course-calendar-header">
           <div>
-            <p class="eyebrow">Practice schedule / Q3 2026</p>
-            <h2 id="course-calendar-title">План онбординга</h2>
+            <p class="eyebrow">Training calendar / Q3 2026</p>
+            <h2 id="course-calendar-title">Календарь модулей</h2>
           </div>
           <p>
-            Три месяца входа в торговую инфраструктуру: от базовой ориентации в софте и режиме desk до регулярной практики, trade review и подготовки к самостоятельной работе. Сейчас отмечены опорные практические дни, позже в них появятся темы занятий и задачи.
+            Три месяца обучения собраны в единую систему: слева меняется описание активного модуля и format key, справа перелистывается календарь с темами, практикой, review и контрольными оценками.
           </p>
         </div>
 
@@ -1186,25 +1186,53 @@
             </div>
           </div>
 
-          <div class="calendar-board-head">
-            <div>
-              <span class="calendar-board-label">ACTIVE MONTH</span>
-              <h3 data-calendar-title>Июнь 2026</h3>
+          <div class="calendar-module-layout">
+            <aside class="calendar-module-panel" aria-live="polite">
+              <span class="calendar-module-index" data-calendar-module-index aria-hidden="true"></span>
+              <h3 data-calendar-module-title>BASE MODUL I</h3>
+
+              <div class="calendar-module-table" aria-label="Module notes">
+                <div>
+                  <span>GOAL THIS MONTH</span>
+                  <strong data-calendar-module-focus></strong>
+                </div>
+                <div>
+                  <span>KEY DATES & CAMPAIGNS</span>
+                  <strong data-calendar-module-rhythm></strong>
+                </div>
+              </div>
+
+              <div class="calendar-format-key">
+                <div class="calendar-format-head">
+                  <span>FORMAT KEY</span>
+                  <small data-calendar-format-note></small>
+                </div>
+                <div class="calendar-format-list" data-calendar-format-key aria-label="Format key"></div>
+              </div>
+            </aside>
+
+            <div class="calendar-board">
+              <div class="calendar-board-head">
+                <div>
+                  <span class="calendar-board-label">ACTIVE MONTH</span>
+                  <h3 data-calendar-title>Июнь 2026</h3>
+                </div>
+                <span class="calendar-practice-counter" data-calendar-counter>0 nodes</span>
+              </div>
+
+              <div class="calendar-weekdays" aria-hidden="true">
+                <span>MON</span>
+                <span>TUE</span>
+                <span>WED</span>
+                <span>THU</span>
+                <span>FRI</span>
+                <span>SAT</span>
+                <span>SUN</span>
+              </div>
+
+              <div class="calendar-days" data-calendar-days aria-live="polite"></div>
             </div>
-            <span class="calendar-practice-counter" data-calendar-counter>0 practice nodes</span>
           </div>
-
-          <div class="calendar-weekdays" aria-hidden="true">
-            <span>Пн</span>
-            <span>Вт</span>
-            <span>Ср</span>
-            <span>Чт</span>
-            <span>Пт</span>
-            <span>Сб</span>
-            <span>Вс</span>
-          </div>
-
-          <div class="calendar-days" data-calendar-days aria-live="polite"></div>
         </div>
       </section>
 

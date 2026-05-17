@@ -96,24 +96,88 @@ window.addEventListener("resize", syncPracticeParticleRoutes);
 const calendarRoot = document.querySelector("[data-course-calendar]");
 
 if (calendarRoot) {
+  const formatKey = [
+    { type: "education", label: "Уроки" },
+    { type: "action", label: "Планирование и задачи на неделю" },
+    { type: "practice", label: "Отработка плана" },
+    { type: "review", label: "Разбор результатов" },
+    { type: "assessment", label: "Контрольные оценки" },
+  ];
+
   const calendarMonths = [
     {
       label: "Июнь",
       title: "Июнь 2026",
+      moduleIndex: "MODULE 01",
+      moduleTitle: "BASE MODUL I",
+      focus: "Define your marketing goal for the month, such as growing your email list by 10% or booking three new clients.",
+      rhythm: "1 — New Year’s Day / 5-8 — New Year Sale",
+      formatNote: "BASE MODUL I",
       year: 2026,
       month: 5,
+      education: [
+        { day: 1, topic: "EDUCATION SOFT", detail: "ПРОГРАММНЫЙ КОМПЛЕКС ИСПОЛНЕНИЯ АНАЛИТИКИ И КОНТРОЛЯ РИСКОВ" },
+        { day: 2, topic: "EDUCATION RESEARCH", detail: "МОДЕЛИ СТРУКТУРНОЙ ОЦЕНКИ ИНСТРУМЕНТОВ" },
+        { day: 3, topic: "EDUCATION EXECUTION", detail: "БАЗОВЫЕ МЕТОДЫ MM ИСПОЛНЕНИЯ" },
+        { day: 4, topic: "EDUCATION RESEARCH", detail: "РАСПРЕДЕЛЕНИЕ ЛИКВИДНОСТИ В РАМКАХ ИСПОЛНЕНИЯ И БАЗОВЫЕ РЕЖИМЫ ПАМПОВ" },
+        { day: 5, topic: "EDUCATION STRATEGIES", detail: "FEAR & SPIKE CAPTURE" },
+        { day: 6, topic: "EDUCATION RISK MANAGEMENT", detail: "УСТРОЙСТВО ТОРГОВОГО БИЗНЕСА ПО ПРИНЦИПУ ОБМЕНЫ РИСКОМ" },
+      ],
+      weeks: [
+        { monday: 8, satType: "review", practiceType: "support" },
+        { monday: 15, satType: "review", practiceType: "practice" },
+        { monday: 22, satType: "assessment", practiceType: "practice" },
+      ],
     },
     {
       label: "Июль",
       title: "Июль 2026",
+      moduleIndex: "MODULE 02",
+      moduleTitle: "ADVANCE MODUL II",
+      focus: "Define your marketing goal for the month, such as growing your email list by 10% or booking three new clients.",
+      rhythm: "1 — New Year’s Day / 5-8 — New Year Sale",
+      formatNote: "ADVANCE MODUL II",
       year: 2026,
       month: 6,
+      education: [
+        { day: 1, topic: "EDUCATION RISK MANAGEMENT", detail: "ПРОФИЛЬ РИСКА" },
+        { day: 2, topic: "EDUCATION RESEARCH", detail: "РАСШИРЕННАЯ КЛАССИФИКАЦИЯ ПАМП-РЕЖИМОВ" },
+        { day: 3, topic: "EDUCATION EXECUTION", detail: "РАСШИРЕНИЕ ИНВЕНТАРЯ АЛГОРИТМИЧЕСКИХ СИСТЕМ УПРАВЛЕНИЯ РИСКАМИ В ПОЗЦИИ" },
+        { day: 4, topic: "EDUCATION RESEARCH", detail: "РАСШИРЕНИЕ ИНВЕНТАРЯ МИКРОСТРУКТУРНЫХ МОДЕЛЕЙ 1 ГРУППА" },
+        { day: 5, topic: "EDUCATION RESEARCH", detail: "РАСШИРЕНИЕ ИНВЕНТАРЯ МИКРОСТРУКТУРНЫХ МОДЕЛЕЙ 2 ГРУППА" },
+        { day: 6, topic: "EDUCATION RESEARCH", detail: "РАСШИРЕНИЕ ИНВЕНТАРЯ МИКРОСТРУКТУРНЫХ МОДЕЛЕЙ 2 ГРУППА" },
+      ],
+      weeks: [
+        { monday: 6, satType: "review", practiceType: "practice" },
+        { monday: 13, satType: "assessment", practiceType: "practice" },
+        { monday: 20, satType: "review", practiceType: "team" },
+        { monday: 27, satType: "assessment", practiceType: "team" },
+      ],
     },
     {
       label: "Август",
       title: "Август 2026",
+      moduleIndex: "MODULE 03",
+      moduleTitle: "SYSTEM TRMODUL III",
+      focus: "Define your marketing goal for the month, such as growing your email list by 10% or booking three new clients.",
+      rhythm: "FORMAT KEY",
+      formatNote: "SYSTEM TRMODUL III",
       year: 2026,
       month: 7,
+      education: [
+        { day: 3, topic: "EDUCATION RISK MANAGEMENT", detail: "УПРАВЛЕНИЕ ШИРОКИМ ПУЛОМ СТРАТЕГИЙ / МУЛЬТИАККАУНТИНГ" },
+        { day: 4, topic: "EDUCATION RESEARCH", detail: "РАСШИРЕННАЯ КЛАССИФИКАЦИЯ ПАМП-РЕЖИМОВ" },
+        { day: 5, topic: "EDUCATION EXECUTION", detail: "РАСШИРЕНИЕ ИНВЕНТАРЯ АЛГОРИТМИЧЕСКИХ СИСТЕМ УПРАВЛЕНИЯ ПОЗИЦИЯМИ" },
+        { day: 6, topic: "EDUCATION RESEARCH", detail: "РАСШИРЕНИЕ ИНВЕНТАРЯ СТРАТЕГИЙ" },
+        { day: 7, topic: "EDUCATION RESEARCH", detail: "РАСШИРЕНИЕ ИНВЕНТАРЯ МИКРОСТРУКТУРНЫХ МОДЕЛЕЙ" },
+        { day: 8, topic: "EDUCATION RESEARCH", detail: "ГОРИЗОНТАЛЬНОЕ МАСШТАБИРОВАНИЕ ТОРГОВОЙ ИНЕФРАСТРУКТУРЫ" },
+      ],
+      weeks: [
+        { monday: 10, satType: "review", practiceType: "practice" },
+        { monday: 17, satType: "assessment", practiceType: "practice" },
+        { monday: 24, satType: "review", practiceType: "team" },
+        { monday: 31, satType: "assessment", practiceType: "team" },
+      ],
     },
   ];
 
@@ -123,29 +187,117 @@ if (calendarRoot) {
   const controlTitleNode = calendarRoot.querySelector("[data-calendar-control-title]");
   const counterNode = calendarRoot.querySelector("[data-calendar-counter]");
   const daysNode = calendarRoot.querySelector("[data-calendar-days]");
+  const moduleIndexNode = calendarRoot.querySelector("[data-calendar-module-index]");
+  const moduleTitleNode = calendarRoot.querySelector("[data-calendar-module-title]");
+  const moduleCopyNode = calendarRoot.querySelector("[data-calendar-module-copy]");
+  const moduleFocusNode = calendarRoot.querySelector("[data-calendar-module-focus]");
+  const moduleRhythmNode = calendarRoot.querySelector("[data-calendar-module-rhythm]");
+  const moduleResultNode = calendarRoot.querySelector("[data-calendar-module-result]");
+  const formatNoteNode = calendarRoot.querySelector("[data-calendar-format-note]");
+  const formatKeyNode = calendarRoot.querySelector("[data-calendar-format-key]");
   let activeMonthIndex = 0;
 
-  function createCalendarDay(dayNumber, monthTitle) {
-    const isPractice = dayNumber % 2 === 1;
+  function getPlannedNode(month, dayNumber) {
+    const educationNode = month.education.find((item) => item.day === dayNumber);
+    if (educationNode) {
+      return { type: "education", ...educationNode };
+    }
+
+    for (const week of month.weeks) {
+      const offset = dayNumber - week.monday;
+      if (offset < 0 || offset > 5) continue;
+
+      if (offset === 0) {
+        return { type: "action", topic: "WEEKLY ACTION PLAN", detail: "" };
+      }
+
+      if (offset >= 1 && offset <= 4) {
+        if (week.practiceType === "team") {
+          return { type: "practice", topic: "PRACTICE TEAM TRADING", detail: "" };
+        }
+
+        if (week.practiceType === "support") {
+          return { type: "practice", topic: "PRACTICE SUPPORT", detail: "" };
+        }
+
+        return { type: "practice", topic: "PRACTICE", detail: "" };
+      }
+
+      if (offset === 5 && week.satType === "assessment") {
+        return { type: "assessment", topic: "MONTHLY ASSESSMENT", detail: "" };
+      }
+
+      if (offset === 5) {
+        return { type: "review", topic: "PRACTICE REVIEW SESSION", detail: "СЕССИЯ РАЗБОРА ПРАКТИКИ" };
+      }
+    }
+
+    return null;
+  }
+
+  function createCalendarDay(dayNumber, month) {
+    const plannedNode = getPlannedNode(month, dayNumber);
     const day = document.createElement("div");
-    day.className = `calendar-day${isPractice ? " is-practice" : ""}`;
+    day.className = `calendar-day${plannedNode ? " is-planned" : ""}`;
+    if (plannedNode) {
+      day.classList.add(`is-${plannedNode.type}`);
+    }
     day.setAttribute("role", "gridcell");
-    day.setAttribute("aria-label", `${dayNumber} ${monthTitle}${isPractice ? ", практика" : ""}`);
+    day.setAttribute(
+      "aria-label",
+      `${dayNumber} ${month.title}${plannedNode ? `, ${plannedNode.topic}: ${plannedNode.detail}` : ""}`,
+    );
 
     const number = document.createElement("span");
     number.className = "calendar-day-number";
     number.textContent = String(dayNumber).padStart(2, "0");
     day.append(number);
 
-    if (isPractice) {
+    if (plannedNode) {
       day.tabIndex = 0;
+      const type = document.createElement("span");
+      type.className = "calendar-day-type";
+      type.textContent = plannedNode.topic;
+      day.append(type);
+
       const label = document.createElement("span");
       label.className = "calendar-day-label";
-      label.textContent = "Практика";
-      day.append(label);
+      if (plannedNode.detail) {
+        label.textContent = plannedNode.detail;
+        day.append(label);
+      }
     }
 
     return day;
+  }
+
+  function renderModulePanel(month) {
+    if (moduleIndexNode) moduleIndexNode.textContent = month.moduleIndex;
+    if (moduleTitleNode) moduleTitleNode.textContent = month.moduleTitle;
+    if (moduleCopyNode) moduleCopyNode.textContent = month.moduleCopy || "";
+    if (moduleFocusNode) moduleFocusNode.textContent = month.focus;
+    if (moduleRhythmNode) moduleRhythmNode.textContent = month.rhythm;
+    if (moduleResultNode) moduleResultNode.textContent = month.result || "";
+    if (formatNoteNode) formatNoteNode.textContent = month.formatNote;
+
+    if (!formatKeyNode) return;
+    formatKeyNode.innerHTML = "";
+    formatKey.forEach((item) => {
+      const row = document.createElement("div");
+      row.className = `calendar-format-item is-${item.type}`;
+
+      const dot = document.createElement("span");
+      dot.className = "calendar-format-dot";
+      dot.setAttribute("aria-hidden", "true");
+
+      const copy = document.createElement("p");
+      const label = document.createElement("strong");
+      label.textContent = item.label;
+      copy.append(label);
+
+      row.append(dot, copy);
+      formatKeyNode.append(row);
+    });
   }
 
   function renderCalendar(monthIndex) {
@@ -153,13 +305,11 @@ if (calendarRoot) {
     const firstDay = new Date(month.year, month.month, 1);
     const daysInMonth = new Date(month.year, month.month + 1, 0).getDate();
     const startOffset = (firstDay.getDay() + 6) % 7;
-    const practiceCount = Math.ceil(daysInMonth / 2);
+    let plannedCount = 0;
 
     if (titleNode) titleNode.textContent = month.title;
     if (controlTitleNode) controlTitleNode.textContent = month.title;
-    if (counterNode) {
-      counterNode.textContent = `${practiceCount} practice nodes`;
-    }
+    renderModulePanel(month);
 
     if (prevButton) prevButton.disabled = monthIndex === 0;
     if (nextButton) nextButton.disabled = monthIndex === calendarMonths.length - 1;
@@ -167,7 +317,7 @@ if (calendarRoot) {
     if (!daysNode) return;
     daysNode.innerHTML = "";
     daysNode.setAttribute("role", "grid");
-    daysNode.setAttribute("aria-label", `Календарь практики: ${month.title}`);
+    daysNode.setAttribute("aria-label", `Календарь модуля: ${month.title}`);
 
     for (let index = 0; index < startOffset; index += 1) {
       const emptyDay = document.createElement("div");
@@ -177,7 +327,12 @@ if (calendarRoot) {
     }
 
     for (let day = 1; day <= daysInMonth; day += 1) {
-      daysNode.append(createCalendarDay(day, month.title));
+      if (getPlannedNode(month, day)) plannedCount += 1;
+      daysNode.append(createCalendarDay(day, month));
+    }
+
+    if (counterNode) {
+      counterNode.textContent = `${plannedCount} training nodes`;
     }
   }
 
