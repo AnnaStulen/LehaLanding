@@ -2,7 +2,13 @@ const openButtons = document.querySelectorAll("[data-open-lightbox]");
 const closeButton = document.querySelector("[data-close-lightbox]");
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = document.querySelector("[data-lightbox-image]");
+const heroTerminalVideo = document.querySelector(".hero-terminal-video");
 let lastLightboxTrigger = null;
+
+if (heroTerminalVideo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  heroTerminalVideo.removeAttribute("autoplay");
+  heroTerminalVideo.pause();
+}
 
 function openLightbox(trigger) {
   if (!lightbox) return;

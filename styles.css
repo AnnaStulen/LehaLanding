@@ -650,35 +650,18 @@ h1 span {
   display: none;
 }
 
-.hero-visual::after {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  content: "";
-  background:
-    linear-gradient(135deg, rgba(0, 93, 255, 0.24), rgba(0, 183, 255, 0.1)),
-    rgba(1, 9, 22, 0.18);
-  mix-blend-mode: screen;
-  opacity: 0.62;
-  transition: opacity 420ms ease;
-}
-
-.hero-visual:hover::after,
-.hero-visual:focus-visible::after {
-  opacity: 0;
-}
-
-.hero-visual img {
+.hero-terminal-video {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 1280 / 680;
+  object-fit: cover;
   filter: none;
   transition: transform 900ms ease;
 }
 
-.hero-visual:hover img,
-.hero-visual:focus-visible img {
+.hero-visual:hover .hero-terminal-video,
+.hero-visual:focus-visible .hero-terminal-video {
   filter: none;
   transform: scale(1.035);
 }
@@ -1876,21 +1859,7 @@ h1 span {
 }
 
 .software-visual-program {
-  aspect-ratio: 3834 / 2004;
-}
-
-.software-visual::after {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  pointer-events: none;
-  content: "";
-  background:
-    linear-gradient(115deg, transparent 0 42%, rgba(0, 183, 255, 0.16) 48%, transparent 56%),
-    linear-gradient(180deg, rgba(0, 183, 255, 0.08), transparent 24%, transparent 76%, rgba(0, 93, 255, 0.08));
-  opacity: 0.38;
-  transform: translateX(-44%);
-  animation: softwareDemoSweep 13.5s ease-in-out infinite;
+  aspect-ratio: 1376 / 768;
 }
 
 .software-visual:hover,
